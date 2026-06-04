@@ -411,50 +411,34 @@
    <section class="faq-accordion-section" style="padding: 80px 0; background: #ffffff;">
     <div class="container" style="max-width: 800px; margin: 0 auto;">
         
-        <!-- Accordion Item 1 -->
-        <div class="faq-item" style="border-bottom: 1px solid #e2e8f0; margin-bottom: 10px;">
-            <button class="faq-trigger" onclick="toggleFaq(this)" style="width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 25px 0; background: none; border: none; cursor: pointer; text-align: left; outline: none;">
-                <span style="font-size: 1.15rem; font-weight: 700; color: var(--text-dark);">"කෝස් ෆී එකට අමතරව බඩු ගන්න සල්ලි නැත්නම් බිස්නස් එක කරන්නේ කොහොමද?"</span>
-                <i class="fa-solid fa-chevron-down" style="color: var(--orange-main); transition: transform 0.3s;"></i>
-            </button>
-            <div class="faq-content" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out; color: var(--text-muted); line-height: 1.8;">
-                <div style="padding-bottom: 25px;">
-                    <p style="margin-bottom: 15px;">මේක බොහෝ දෙනෙක්ට තියෙන ගැටලුවක්. ඒ නිසාම අපි කෝස් එක ඇතුළේ විසඳුම් 2ක් දීලා තියෙනවා:</p>
-                    <ul style="list-style: none; padding-left: 0;">
-                        <li style="margin-bottom: 12px;"><i class="fa-solid fa-check" style="color: var(--orange-main); margin-right: 8px;"></i> <b>Local Wholesale Contacts:</b> චීනයෙන් බඩු ගෙන්නනකල් ඉන්න ඕනේ නෑ. Alibaba මිලටම ලංකාව ඇතුළෙන්ම (Wholesale price) බඩු ගන්න පුළුවන් අපේ VIP Local Sellers ලගේ සම්බන්ධතා අපි ඔයාට දෙනවා. බඩු 5ක් 10ක් වුණත් අරන් වැඩේ පටන් ගන්න පුළුවන්.</li>
-                        <li><i class="fa-solid fa-check" style="color: var(--orange-main); margin-right: 8px;"></i> <b>Free Marketing Strategies:</b> Ads වලට සල්ලි නැද්ද? ප්‍රශ්නයක් නෑ! TikTok සහ Reels හරහා සතයක්වත් වියදම් නොකර (Organic) දිනපතා ඕඩර්ස් ගන්නා රහස් ක්‍රම අපි වෙනම මොඩියුලයකින් කියලා දෙනවා.</li>
-                    </ul>
+<section style="padding: 80px 0; background: #ffffff;">
+    <div class="container" style="max-width: 900px; margin: 0 auto;">
+        <h2 style="font-size: 2.2rem; font-weight: 800; text-align: center; margin-bottom: 50px;">අවශ්‍ය මූලික ආයෝජනය කොපමණද?</h2>
+        
+        <div style="background: #f8fafc; border-radius: 24px; padding: 40px; border: 1px solid #e2e8f0;">
+            <div style="text-align: center; margin-bottom: 30px;">
+                <p style="font-size: 1.1rem; color: #64748b;">ආරම්භක අවම මුදල</p>
+                <h3 style="font-size: 2.8rem; font-weight: 800; color: #ff6b00; margin: 10px 0;">Rs. 15,000 - 25,000</h3>
+            </div>
+            
+            <p style="text-align: center; color: #475569; margin-bottom: 30px;">ලොකු බිස්නස් එකකට ලක්ෂ ගණන් සල්ලි ඕනේ නෑ. මේ තියෙන්නේ වියදම් බෙදී යන ආකාරය.</p>
+            
+            <div style="display: grid; gap: 15px;">
+                <div style="display: flex; justify-content: space-between; background: white; padding: 15px 25px; border-radius: 12px; border: 1px solid #e2e8f0;">
+                    <span>භාණ්ඩ තොගය (Sourcing)</span>
+                    <span style="font-weight: 700;">Rs. 10,000</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; background: white; padding: 15px 25px; border-radius: 12px; border: 1px solid #e2e8f0;">
+                    <span>Shipping & Tax</span>
+                    <span style="font-weight: 700;">Rs. 6,000</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; background: white; padding: 15px 25px; border-radius: 12px; border: 1px solid #e2e8f0;">
+                    <span>Marketing & Ads</span>
+                    <span style="font-weight: 700;">Rs. 5,000</span>
                 </div>
             </div>
         </div>
-
-        <!-- තව ප්‍රශ්න ඕනේ නම් මෙතනින් පහළට තවත් .faq-item එකක් එකතු කරන්න -->
-
     </div>
-
-    <script>
-        function toggleFaq(btn) {
-            const content = btn.nextElementSibling;
-            const icon = btn.querySelector('i');
-            
-            // Close others if you want only one open at a time
-            document.querySelectorAll('.faq-content').forEach(item => {
-                if(item !== content) {
-                    item.style.maxHeight = null;
-                    item.previousElementSibling.querySelector('i').style.transform = 'rotate(0deg)';
-                }
-            });
-
-            // Toggle current
-            if (content.style.maxHeight) {
-                content.style.maxHeight = null;
-                icon.style.transform = 'rotate(0deg)';
-            } else {
-                content.style.maxHeight = content.scrollHeight + "px";
-                icon.style.transform = 'rotate(180deg)';
-            }
-        }
-    </script>
 </section>
     <!-- PROFIT CALCULATION SECTION -->
     <section class="calculation-section">
