@@ -35,13 +35,11 @@
             font-family: 'Noto Sans Sinhala', 'Plus Jakarta Sans', sans-serif;
             background-color: var(--bg-body);
             color: var(--text-dark);
-            /* සිංහල අකුරු එක උඩ එක වැදීම වැළැක්වීමට line-height එක 1.8 දක්වා වැඩි කළා */
             line-height: 1.8;
             overflow-x: hidden;
             scroll-behavior: smooth;
         }
 
-        /* සියලුම සිංහල text සඳහා අකුරු ළං වීම වැළැක්වීමට සුළු පරතරයක් එකතු කළා */
         p, span, h1, h2, h3, h4, li {
             letter-spacing: 0.2px;
         }
@@ -194,19 +192,20 @@
         .calc-step-card.final-profit p { color: rgba(255,255,255,0.9); }
         
         .calc-summary-bar { background: #0f172a; color: white; border-radius: 20px; padding: 25px; margin-top: 40px; display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap; gap: 20px; text-align: center; }
-        .summary-item h4 { font-size: 1.6rem; font-weight: 800; color: var(--orange-main); }
+        .summary-item h4 { font-size: 1.6rem; font-weight: 800; color: var(--orange-main); font-family: 'Plus Jakarta Sans', sans-serif;}
         .summary-item p { font-size: 0.9rem; color: #94a3b8; font-weight: 600; }
 
         /* Strategic Objections & Vision Boxes */
         .objection-handler-box { background: #f0fdf4; border: 1px solid #bbf7d0; color: #166534; padding: 25px; border-radius: 20px; margin-top: 30px; font-size: 1.05rem; font-weight: 600; line-height: 1.8; }
         .vision-multiplier-box { background: #eff6ff; border: 1px solid #bfdbfe; color: #1e40af; padding: 25px; border-radius: 20px; margin-top: 20px; font-size: 1.05rem; font-weight: 600; line-height: 1.8; }
 
-        /* Step by Step Flow (NO ICONS) */
+        /* Step by Step Flow */
         .process-section { background: var(--bg-body); }
         .process-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 40px 24px; margin-top: 40px; }
         .process-card { background: var(--bg-subtle); border: 1px solid var(--border-light); padding: 50px 30px 40px 30px; border-radius: 24px; position: relative; }
         .process-step-num { font-size: 3rem; font-weight: 900; background: linear-gradient(135deg, #ff6b00, #ffaa66); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1; margin-bottom: 15px; display: block; font-family: 'Plus Jakarta Sans', sans-serif; }
         .process-card h3 { font-size: 1.35rem; margin-bottom: 12px; font-weight: 700; }
+        .process-card p { font-size: 0.95rem; color: var(--text-muted); line-height: 1.7; }
 
         /* Modules Section */
         .modules-section { background: var(--bg-subtle); }
@@ -216,6 +215,7 @@
         .module-tag { color: var(--orange-main); font-weight: 700; font-size: 0.85rem; text-transform: uppercase; font-family: 'Plus Jakarta Sans', sans-serif; }
         .video-badge { background: rgba(255, 107, 0, 0.06); color: var(--orange-main); font-size: 0.75rem; padding: 4px 10px; border-radius: 6px; font-weight: 700; border: 1px solid rgba(255, 107, 0, 0.15); display: inline-flex; align-items: center; gap: 6px; font-family: 'Plus Jakarta Sans', sans-serif; }
         .module-card h3 { font-size: 1.4rem; margin-bottom: 12px; font-weight: 700; }
+        .module-card p { font-size: 0.95rem; color: var(--text-muted); line-height: 1.7; }
         
         /* Shipping Alert Banner */
         .highlight-alert { background: #fffbeb; border: 1px solid #fef3c7; color: #b45309; font-size: 0.95rem; padding: 16px; border-radius: 14px; margin-top: 15px; font-weight: 500; display: flex; gap: 12px; align-items: flex-start; line-height: 1.7; }
@@ -241,7 +241,6 @@
         .value-block:nth-child(even) { flex-direction: row-reverse; }
         .value-content { flex: 1; }
         
-        /* image_2337a4.png හි ඇති පරිදි සිංහල අකුරු එකිනෙක ගැටීම වැළැක්වීමට මෙහි line-height සහ padding සකස් කළා */
         .value-visual { 
             flex: 1; 
             background: var(--bg-subtle); 
@@ -259,7 +258,6 @@
             line-height: 1.8;
             margin-bottom: 20px;
         }
-        /* "අතරමැදි වියදම් නැත" ඇතුළත් කොටුවේ line-height සහ padding නිවැරදි කිරීම */
         .visual-badge-box {
             background: white; 
             padding: 16px 20px; 
@@ -310,7 +308,7 @@
         .audience-card p { font-size: 1rem; font-weight: 600; line-height: 1.6; }
 
         /* COURSE PRICING & SUMMARY CARD SECTION */
-        .pricing-section { background: var(--bg-subtle); padding: 10px 0; }
+        .pricing-section { background: var(--bg-subtle); padding: 60px 0; }
         .pricing-card { max-width: 650px; margin: 0 auto; background: white; border: 1px solid rgba(15, 23, 42, 0.08); border-radius: 32px; overflow: hidden; box-shadow: 0 30px 60px rgba(0,0,0,0.03); }
         .pricing-header { background: #0f172a; color: white; padding: 40px 35px; text-align: center; }
         .pricing-header h3 { font-size: 1.8rem; font-weight: 700; margin-bottom: 10px; line-height: 1.4; }
@@ -411,64 +409,51 @@
             <div class="calc-summary-bar">
                 <div class="summary-item">
                     <h4>දිනකට Orders 16ක්</h4>
-                    <p>ලොකු ගාණක් නෙමෙයි, දවසට Orders 16ක් තිබ්බම ඇති.</p>
-                </div>
-                <div class="summary-item" style="border-left: 1px solid rgba(255,255,255,0.1); border-right: 1px solid rgba(255,255,255,0.1); padding: 0 30px;">
-                    <h4>මාසෙකට Orders 500ක්</h4>
-                    <p>දිනපතා Orders ටික මාසෙ අන්තිමට එකතු වෙද්දී.</p>
+                    <p>ලොකු ගාණක් නෙමෙයි, දවසට Orders 16ක් තිබ්බොත් ඇති.</p>
                 </div>
                 <div class="summary-item">
-                    <h4 style="color: #10b981;">Rs. 1,000,000 ක ශුද්ධ ලාභය!</h4>
-                    <p style="color: #10b981;">මාසෙ අන්තිමට ඔයාගේ අතේ තියෙන මුළු ලාභය.</p>
+                    <h4>මාසික ලාභය</h4>
+                    <p>රුපියල් 2,000 × 16 × දවස් 30 = <b>Rs. 960,000 (ලක්ෂ 10කට ආසන්නයි!)</b></p>
                 </div>
             </div>
 
-            <!-- OBJECTION HANDLER REALITY CHECK -->
             <div class="objection-handler-box">
-                <i class="fa-solid fa-lightbulb" style="color: #16a34a; margin-right: 8px;"></i>
-                දවසට Orders 16-17ක් ගන්න එක මුලින්ම බලද්දී අමාරුයි වගේ පෙනෙන්න පුළුවන්. හැබැයි බිස්නස් එක ඇතුළේ ඇත්තම කතාව ඒක නෙමෙයි. අපේ Sourcing breaths හරියටම පාවිච්චි කරලා ලංකාවේ ඇත්තටම Demand එකක් තියෙන හරි Product එකක් Select කරගත්තොත්, දවසට Orders 100ක් වුණත් ගන්න එක සුළු දෙයක්!
+                <i class="fa-solid fa-circle-check"></i> <b>"ලංකාවේ මිනිස්සු ඕවා ගනීද?"</b> කියලා හිතෙනවාද? ඔව්, මිනිස්සුන්ගේ ප්‍රශ්න විසඳන (Problem-solving) හොඳ භාණ්ඩයක් තෝරාගත්තොත් මිනිස්සු පොරකාලා ගන්නේ. ඒ වගේ Products හොයාගන්න රහස් ක්‍රම අපි මේ කෝස් එකෙන් කියා දෙනවා.
             </div>
-
-            <!-- VISION MULTIPLIER BOX -->
+            
             <div class="vision-multiplier-box">
-                <i class="fa-solid fa-chart-line" style="color: #2563eb; margin-right: 8px;"></i>
-                අපි උඩින් මෙච්චර වෙලා ලස්සනට පැහැදිලි කරලා දුන්නේ එකම එක Product එකක් විතරක් Sell කරලා මාසෙකට ලක්ෂ 10ක් හොයන විදියනේ. පොඩ්ඩක් හිතලා බලන්න ඔයා මේ වගේ සාර්ථක Winners විදිහට තහවුරු වුණු Products 10ක් එකපාර Sell කළොත් ඔයාට මාසෙකට කොච්චර විශාල මුදලක් හොයන්න පුළුවන්ද කියලා!
+                <i class="fa-solid fa-rocket"></i> <b>වැදගත්ම දේ:</b> එක Product එකකින් ලක්ෂ 9ක් හොයන්න පුළුවන් නම්, ඔයා ළඟ ඒ වගේ සාර්ථක Products 3ක් තිබ්බොත් ලාභය කොහොම වෙයිද කියලා හිතලා බලන්න!
             </div>
-
         </div>
     </section>
 
-    <!-- Step by Step Business Flow Section -->
+    <!-- Step by Step Flow Section -->
     <section class="process-section">
         <div class="container">
-            <h2 class="section-title">අපි බිස්නස් එක කරන්නේ <span>කොහොමද? (පියවර 4)</span></h2>
-            <p class="section-subtitle">කිසිම පැටලිල්ලක් නැහැ, ඉතාම සරලව බිස්නස් එක රන් වෙන්නේ මේ විදිහටයි.</p>
+            <h2 class="section-title">සාර්ථක වෙන්න <span>පියවර 4ක්</span></h2>
+            <p class="section-subtitle">අපි වැඩේ කරන්නේ පිළිවෙලකට. කෝස් එක ඇතුළේ ඔයා මේ පියවර හතර ඒ විදිහටම ඉගෙන ගන්නවා.</p>
+            
             <div class="process-grid">
-                
                 <div class="process-card hover-lift">
                     <span class="process-step-num">01</span>
-                    <h3>විකිණෙන බඩු සෙවීම</h3>
-                    <p>ලංකාවේ මාකට් එකේ උණු කැවුම් වගේ විකිණෙන, සුපිරි ලාභයක් තියෙන Trending බඩු ලේසියෙන්ම හොයාගන්නා රහස් ක්‍රම.</p>
+                    <h3>Winning Product එකක් සෙවීම</h3>
+                    <p>Alibaba එකේ තියෙන මිලියන ගණනක් බඩු අතරින් ලංකාවේ මාකට් එකට ගැලපෙන, ඉක්මනින්ම විකුණලා ඉවර කරන්න පුළුවන් සුපිරි භාණ්ඩ තෝරාගන්නා ආකාරය.</p>
                 </div>
-
                 <div class="process-card hover-lift">
                     <span class="process-step-num">02</span>
-                    <h3>අඩු මිලට බඩු ගෙන්වීම</h3>
-                    <p>අතරමැදියෝ නැතුව චීනයේ Alibaba එකෙන් කෙලින්ම රුපියල් 200 වගේ අඩුම මිලකට බඩු ගෙන්වන හැටි හෝ ලංකාවේ Wholesale අයගෙන් ගන්න හැටි.</p>
+                    <h3>Supplier කෙනෙක් සම්බන්ධ කර ගැනීම</h3>
+                    <p>අඩුම මිලට, හොඳම තත්ත්වයේ බඩු දෙන විශ්වාසවන්ත Alibaba නිවැරදි සප්ලයර් කෙනෙක් සොයාගෙන සාකච්ඡා පවත්වන ආකාරය සරලවම.</p>
                 </div>
-
                 <div class="process-card hover-lift">
                     <span class="process-step-num">03</span>
-                    <h3>Product එක මාකට් කිරීම</h3>
-                    <p>Facebook, TikTok දාලා සතයක්වත් වියදම් නොකර Free ක්‍රම වලින් හෝ පොඩි ගාණක Ads දාලා Customersලා දහස් ගණනක් ගෙන්න ගන්නා හැටි.</p>
+                    <h3>ලංකාවට ගෙන්වා ගැනීම (Shipping)</h3>
+                    <p>කිසිම බදු ප්‍රශ්නයක් හෝ Custom එකේ හිරවීමක් නැතුව, Sea Shipping හෝ Air Shipping හරහා ඉතාම අඩු වියදමකින් බඩු ලංකාවටම ගෙන්වා ගන්නා ආකාරය.</p>
                 </div>
-
                 <div class="process-card hover-lift">
                     <span class="process-step-num">04</span>
-                    <h3>Order එක Delivery කිරීම (COD)</h3>
-                    <p>ලැබෙන Orders ටික Courier Service එකෙන් Customerගේ ගෙදරටම යවලා, සල්ලි ටික ඔයාගේ Account එකටම ලේසියෙන්ම ගන්නා ක්‍රමය.</p>
+                    <h3>Facebook & TikTok Ads හරහා විකිණීම</h3>
+                    <p>ඔයාගේ බඩුවල විස්තර ලංකාව වටේම ඉන්න දහස් ගණන් ගනුදෙනුකරුවන්ට පෙනෙන්න Ads හදලා, දිනපතා විශාල ඕඩර්ස් ප්‍රමාණයක් ලබාගන්නා රහස් ක්‍රමවේද.</p>
                 </div>
-
             </div>
         </div>
     </section>
@@ -476,301 +461,245 @@
     <!-- Modules Section -->
     <section class="modules-section">
         <div class="container">
-            <h2 class="section-title">කෝස් එකේ තියෙන <span>වීඩියෝ පාඩම් මාලාව (Modules 06)</span></h2>
-            <p class="section-subtitle">ඔයාට කැමති වෙලාවක, කැමති වාර ගණනක් ෆෝන් එකෙන් බලලා ලේසියෙන්ම ඉගෙන ගන්න පුළුවන් සුපිරි HD වීඩියෝ පාඩම් ටික මෙන්න.</p>
+            <h2 class="section-title">කෝස් එකේ <span>මොඩියුලයන්</span></h2>
+            <p class="section-subtitle">මුල සිට අගට සියල්ලම පියවරෙන් පියවර පැහැදිලි කෙරෙන සම්පූර්ණ වීඩියෝ මාලාව.</p>
+            
             <div class="modules-grid">
-                
+                <!-- Module 1 -->
                 <div class="module-card hover-lift">
-                    <div class="module-meta"><span class="module-tag">Module 01</span><span class="video-badge">Video Lessons</span></div>
-                    <h3>ඊ-කොමස් මුල සිට සරලව</h3>
-                    <p>ඔන්ලයින් බිස්නස් එකක් පටන් ගන්න කොට මූලිකවම ඕන කරන සෙටප් ටික කිසිම වැරදීමක් නැතුව හරියටම හදාගන්න විදිහ.</p>
+                    <div class="module-meta">
+                        <span class="module-tag">Module 01</span>
+                        <span class="video-badge"><i class="fa-solid fa-video"></i> Videos</span>
+                    </div>
+                    <h3>Introduction to Alibaba & E-Commerce</h3>
+                    <p>Alibaba වෙබ් අඩවිය ක්‍රියාත්මක වන ආකාරය සහ ලංකාව ඇතුළේ ඊ-කොමර්ස් ව්‍යාපාරයක් සාර්ථකව සිදු කරන්නේ කෙසේද යන්න පිළිබඳ මූලික හැඳින්වීම.</p>
                 </div>
-
-                <div class="module-card hover-lift" style="border: 2px solid var(--orange-main); box-shadow: 0 15px 30px rgba(255, 107, 0, 0.06);">
-                    <div class="module-meta"><span class="module-tag" style="color:var(--orange-main); font-weight:800;">Module 02 (වැදගත්ම කොටස)</span><span class="video-badge" style="background:rgba(255,107,0,0.1);">Most Important</span></div>
-                    <h3>බඩු ගෙන්වීම (Sourcing & Shipping)</h3>
-                    <p>චීනෙන් ලංකාවටම ඉතාම අඩු මිලට බඩු ගෙන්න ගන්නා හැටි සහ ලංකාවේ ඉන්න Local Suppliersලාගෙන් බඩු ගන්නා හැටි.</p>
+                <!-- Module 2 -->
+                <div class="module-card hover-lift">
+                    <div class="module-meta">
+                        <span class="module-tag">Module 02</span>
+                        <span class="video-badge"><i class="fa-solid fa-video"></i> Videos</span>
+                    </div>
+                    <h3>Product Research Techniques</h3>
+                    <p>අලෙවිය ඉතා ඉහළ, තරඟකාරීත්වය අඩු සහ වැඩි ලාභාංශයක් තබාගත හැකි "Winning Products" රහසිගත ටූල්ස් භාවිතයෙන් සොයාගන්නා ආකාරය.</p>
+                </div>
+                <!-- Module 3 -->
+                <div class="module-card hover-lift">
+                    <div class="module-meta">
+                        <span class="module-tag">Module 03</span>
+                        <span class="video-badge"><i class="fa-solid fa-video"></i> Videos</span>
+                    </div>
+                    <h3>Sourcing & Supplier Negotiation</h3>
+                    <p>චීන සප්ලයිඅර්ස්ලා සමඟ වෘත්තීය මට්ටමින් කතා කර, භාණ්ඩයේ මිල තවත් අඩු කරගන්නා ආකාරය සහ වංචාවලින් බේරී වැඩ කරන ආකාරය.</p>
+                </div>
+                <!-- Module 4 -->
+                <div class="module-card hover-lift">
+                    <div class="module-meta">
+                        <span class="module-tag">Module 04</span>
+                        <span class="video-badge"><i class="fa-solid fa-video"></i> Videos</span>
+                    </div>
+                    <h3>Shipping, Logistics & Custom Clearance</h3>
+                    <p>3rd Party Logistics සහ Forwarding Agents ලා භාවිත කරමින් කිසිදු ලියකියවිලි ප්‍රශ්නයකින් තොරව බඩු ගෙදරටම ගෙන්වා ගැනීම.</p>
                     <div class="highlight-alert">
-                        <i class="fa-solid fa-circle-exclamation" style="font-size: 1.2rem; color: #b45309; margin-top: 3px;"></i> 
-                        <span><b>Alibaba එකේ බඩු ලාභ වුණත් Shipping සහ Tax වැඩි වෙයි කියලා බයද?</b> ඒකට තමයි අපේ රහස් OBI ක්‍රම තියෙන්නේ. Shipping Cost එක පට්ටම අඩු කරගෙන, බදු (Tax) ප්‍රශ්න ඔක්කොම විසඳගෙන ලංකාවටම බඩු ගේන හැටි මේකෙන් කියා දෙනවා!</span>
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                        <span><b>විශේෂ උපදෙස්:</b> Custom බදු ගැන බය වෙන්න එපා. අපි ලබාදෙන ක්‍රමවේදය හරහා Shipping Cost එක ඇතුළටම Tax එකත් Clear වෙලා ඔයාගේ අතටම බඩු ලැබෙනවා!</span>
                     </div>
                 </div>
-
+                <!-- Module 5 -->
                 <div class="module-card hover-lift">
-                    <div class="module-meta"><span class="module-tag">Module 03</span><span class="video-badge">Video Lessons</span></div>
-                    <h3>Trending Products තෝරාගැනීමේ රහස්</h3>
-                    <p>දැම්ම ගමන් මාකට් එකේ පිස්සුවෙන් වගේ විකිණෙන, වැඩිම ලාභයක් ඉතිරි වෙන සුපිරි Products හොයාගන්නා ක්‍රම.</p>
+                    <div class="module-meta">
+                        <span class="module-tag">Module 05</span>
+                        <span class="video-badge"><i class="fa-solid fa-video"></i> Videos</span>
+                    </div>
+                    <h3>Advanced Facebook & TikTok Ads</h3>
+                    <p>අඩුම Cost එකකින් වැඩිම පිරිසකට ඔයාගේ භාණ්ඩය පෙන්වා, සැබෑ ලෙසම මිලදී ගන්නා ගනුදෙනුකරුවන් (Targeting) සොයාගන්නා ඇඩ්ස් ක්‍රමවේද.</p>
                 </div>
-
+                <!-- Module 6 -->
                 <div class="module-card hover-lift">
-                    <div class="module-meta"><span class="module-tag">Module 04</span><span class="video-badge">Video Lessons</span></div>
-                    <h3>Social Media Post සහ වීඩියෝ ඇඩ් හැදීම</h3>
-                    <p>ඔයාගේ බිස්නස් එකට මිනිස්සු ඇදිලා එන විදිහේ ලස්සන Photos සහ වීඩියෝ Ads, ප්‍රෝ ලෙවල් එකට ෆෝන් එකෙන්ම ඩිසයින් කරගන්නා හැටි.</p>
+                    <div class="module-meta">
+                        <span class="module-tag">Module 06</span>
+                        <span class="video-badge"><i class="fa-solid fa-video"></i> Videos</span>
+                    </div>
+                    <h3>Order Fulfillment & Courier Delivery</h3>
+                    <p>ලංකාවේ ප්‍රමුඛ පෙළේ කුරියර් සේවා සමඟ එකතු වී Cash on Delivery (COD) ක්‍රමයට භාණ්ඩ පාරිභෝගිකයාට යවා මුදල් ගිණුමට ලබාගැනීම.</p>
                 </div>
-
-                <div class="module-card hover-lift">
-                    <div class="module-meta"><span class="module-tag">Module 05</span><span class="video-badge">Video Lessons</span></div>
-                    <h3>Campaigns Run කරලා Orders ගැනීම</h3>
-                    <p>අඩුම වියදමකින් Facebook සහ TikTok හරහා Ads දාලා, වැඩිම විකුණුම් (Sales) ප්‍රමාණයක් එක දිගට ලබාගන්නා ආකාරය.</p>
-                </div>
-
-                <div class="module-card hover-lift">
-                    <div class="module-meta"><span class="module-tag">Module 06</span><span class="video-badge">Video Lessons</span></div>
-                    <h3>දිගුකාලීන බිස්නස් ප්ලෑන් එක</h3>
-                    <p>නිකන්ම බඩු විකුණන්නේ නැතුව, ලංකාවේ හැමෝම දන්න ලොකු Brand එකක් විදිහට ඔයාගේ බිස්නස් එක ඉස්සරහටම අරන් යන හැටි.</p>
-                </div>
-
             </div>
 
-            <!-- VIP CONTACTS HIGHLIGHT BANNER -->
+            <!-- VIP Contacts Banner Inside Modules -->
             <div class="contacts-highlight-banner">
                 <div class="contacts-icon">
                     <i class="fa-solid fa-address-book"></i>
                 </div>
                 <div class="contacts-text">
-                    <h3>හැම බිස්නස් කන්ටැක්ට් එකක්ම නොමිලේ ! (VIP Access)</h3>
-                    <p>ඔයාට තනියම Suppliersලා, Agentsලා හොයන්න ලතැවෙන්න ඕනේ නැහැ! බිස්නස් එක සැරටම කරන්න ඕන වෙන ලංකාවේ විශ්වාසවන්තම <b>Customs Agents ලා, අඩුම මිලට බඩු නිදහස් කරන Sea/Air Clearing Lines, සහ ලංකාවේ අඩුවටම බඩු දෙන Wholesale Suppliersලාගේ</b> ඔක්කොම පෞද්ගලික ෆෝන් නම්බර්ස් සහ විස්තර ලයිස්තුව කෝස් එකත් එක්කම ඔයාට නොමිලේ ලැබෙනවා.</p>
+                    <h3>ලංකාවේ හොඳම Shipping & Courier VIP Contacts</h3>
+                    <p>කෝස් එකත් එක්කම මම ඔයාට ලංකාවට ආරක්ෂිතව සහ අඩුම මිලට බඩු ගේන චීන ඒජන්ට්ස්ලාගේ (Shipping Agents) සහ ලංකාවේ විශ්වාසවන්තම කුරියර් සේවා ප්‍රධානීන්ගේ <b>VIP දුරකථන අංක සෘජුවම ලබා දෙනවා.</b> ඒ නිසා ඔයාට කිසිම තැනක රස්තියාදු වෙන්න වෙන්නේ නැහැ.</p>
                 </div>
             </div>
-
         </div>
     </section>
 
-    <!-- FREE SOFTWARE BONUSES SECTION -->
+    <!-- Free Software Bonuses Section -->
     <section class="bonus-section">
         <div class="container">
-            <h2 class="section-title">Course එක ඉවර කරන අයට ලැබෙන <span>රුපියල් 50,000කට වඩා වටිනා Premium Tools</span></h2>
-            <p class="section-subtitle">ඔයාගේ ව්‍යාපාරයේ වැඩ කටයුතු වඩාත් පහසු සහ වෘත්තීය මට්ටමෙන් කරගෙන යාම සඳහා මේ සියල්ල සම්පූර්ණයෙන්ම නොමිලේ පිරිනමනු ලැබේ.</p>
+            <h2 class="section-title">ඔයාට ලැබෙන <span>නොමිලේ බෝනස්</span></h2>
+            <p class="section-subtitle">කෝස් එකට අමතරව ව්‍යාපාරය සාර්ථක කරගන්න අපි දෙන වටිනා තෑගි.</p>
             
             <div class="bonus-grid">
-                <!-- Bonus 1 -->
                 <div class="bonus-card hover-lift">
-                    <span class="bonus-tag">Free Access</span>
-                    <h3>Canva Pro</h3>
-                    <p>ඔයාගේ Products සඳහා ඉතාමත් ආකර්ෂණීය සහ සුපිරි ගණයේ Social Media Posts ලෙහෙසියෙන්ම සකසා ගැනීමට අවශ්‍ය සියලුම පහසුකම් සහිත වටිනා ගිණුම නොමිලේ.</p>
+                    <span class="bonus-tag">Bonus 01</span>
+                    <h3>Product Research Softwares</h3>
+                    <p>මාකට් එකේ ट्रेंड වන සුපිරි බඩු ස්වයංක්‍රීයවම සොයා දෙන රුපියල් දහස් ගණන් වටිනා Premium Softwares සහ Tools නොමිලේම භාවිතා කිරීමට අවස්ථාව.</p>
                 </div>
-
-                <!-- Bonus 2 -->
                 <div class="bonus-card hover-lift">
-                    <span class="bonus-tag">Free Access</span>
-                    <h3>CapCut Pro</h3>
-                    <p>TikTok සහ Facebook සඳහා මිනිස්සුන්ව ඇදගන්නා සුළු High-Converting වීඩියෝ Ads ඉතා කෙටි කාලයකින් වෘත්තීය මට්ටමෙන් Edit කර ගැනීමට අවශ්‍ය Premium මෙවලම් කට්ටලය.</p>
+                    <span class="bonus-tag">Bonus 02</span>
+                    <h3>Ready-Made Ad Templates</h3>
+                    <p>Ads දාන්න ලස්සනට Videos සහ Photo Posts හදාගන්න බැරිද? ප්‍රශ්නයක් නැහැ, පහසුවෙන් වෙනස් කරගත හැකි High-Converting Template රාශියක් ඔයාට ලැබෙනවා.</p>
                 </div>
-
-                <!-- Bonus 3 -->
                 <div class="bonus-card hover-lift">
-                    <span class="bonus-tag">Free Access</span>
-                    <h3>WhatsApp CRM Tool</h3>
-                    <p>ඔයාගේ Customersලා දහස් ගණනකට එකවර ඉතා වේගයෙන් Messages යැවීමට, ස්වයංක්‍රීයව පිළිතුරු සැපයීමට සහ විකුණුම් කළමාරුකරණය පහසු කරන වටිනා මෘදුකාංගය.</p>
+                    <span class="bonus-tag">Bonus 03</span>
+                    <h3>Private Support Community</h3>
+                    <p>වැඩේ කරගෙන යද්දී ප්‍රශ්නයක් ආවොත් ඕනෑම වෙලාවක අහලා දැනගන්න පුළුවන් සිසුන් සහ ප්‍රවීණයන් එකතු වුණු රහස් Support Group එකකට ඇතුළත් වීම.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Strategic Breakdown Sections -->
-    <section class="value-explainer-section">
-        <div class="container">
-            <h2 class="section-title">ඇයි මේ කෝස් එක <span>ඔයාට මෙච්චරම වටින්නේ?</span></h2>
-            <p class="section-subtitle">නිකන්ම තියරි විතරක් උගන්වන කෝස් වගේ නෙමෙයි, මේකෙන් ඔයාට ලැබෙන සුපිරි වාසි මෙන්න.</p>
+    <!-- Value Explainer Layout Section -->
+    <section class="container">
+        <h2 class="section-title">අපි <span>වෙනස් වෙන්නේ</span> කොහොමද?</h2>
+        <p class="section-subtitle">සාමාන්‍ය සම්ප්‍රදායික කෝස් එකකට වඩා OBI හරහා ඔයාට ලැබෙන සුවිශේෂී වාසි.</p>
 
-            <!-- Breakdown 1 -->
-            <div class="value-block">
-                <div class="value-content">
-                    <div class="value-icon-box"><i class="fa-solid fa-wallet"></i></div>
-                    <h3><span style="font-family:'Plus Jakarta Sans'">Zero Stock</span> බිස්නස් එක පටන් ගන්න පුළුවන්</h3>
-                    <p>බිස්නස් එකක් පටන් ගන්න ලොකු මුදලක් Stock වලට යට කරන්න ඕනෙ කියලා හිතන් ඉන්නවා නම් ඒක වැරදියි. මේ කෝස් එකේදී, මුලින්ම එක රුපියලක්වත් බඩු ගන්න වියදම් නොකර, ලංකාවේ ඉන්න Local Suppliersලා හරහා Dropshipping ක්‍රමයට බිස්නස් එක එක සතයකින් පටන් ගන්නා රහස් ක්‍රම අපි කියා දෙනවා.</p>
-                    <div class="metric-row">
-                        <div class="metric-item"><span class="metric-num">Rs. 0</span><span class="metric-lbl">ආරම්භක ආයෝජනය</span></div>
-                        <div class="metric-item"><span class="metric-num">100%</span><span class="metric-lbl">ප්‍රායෝගික ක්‍රමවේද</span></div>
+        <!-- Block 1 -->
+        <div class="value-block">
+            <div class="value-content">
+                <div class="value-icon-box"><i class="fa-solid fa-shield-halved"></i></div>
+                <h3>අතරමැදියන් නැත, සෘජුවම සන්නිවේදනය</h3>
+                <p>බොහෝ දෙනෙක් ලංකාවේ තොග කඩවලින් බඩු අරන් විකුණද්දී ඔයා කෙලින්ම යන්නේ නිෂ්පාදකයා (Manufacturer) ළඟටයි. ඒ නිසා ඔයාට උපරිම ලාභයක් ව්‍යාපාරය ඇතුළේ රඳවා ගන්න පුළුවන් වෙනවා.</p>
+                <div class="metric-row">
+                    <div class="metric-item">
+                        <span class="metric-num">0%</span>
+                        <span class="metric-lbl">Middleman Fee</span>
                     </div>
-                </div>
-
-            <!-- Breakdown 2 (FIXED HEADING FROM image_2336e7.png + INCORPORATED USER REQUEST) -->
-            <div class="value-block">
-                <div class="value-content">
-                    <div class="value-icon-box"><i class="fa-solid fa-ship"></i></div>
-                    <h3>පොඩි මුදලකින් චීනෙන් කෙලින්ම බඩු ගෙන්වමු</h3>
-                    <p>චීනයේ Alibaba එකෙන් සෘජුවම නිෂ්පාදකයෝ (Manufacturers) සම්බන්ධ කරගෙන, රු. 200 - 300 වගේ පට්ටම අඩු මිලට සුපිරි බඩු ලංකාවට කුඩා ඇණවුම් විදිහට (Small MOQ) ගෙන්න ගන්නා හැටි පියවරෙන් පියවර බලාගන්න පුළුවන්. රුපියල් 5,000ක් වැනි සුළු මුදලක් තිබ්බත් චීනයේ ඉඳන්ම බඩු ගෙන්නලා ඔයාගේ ව්‍යාපාරය සාර්ථකව පටන් ගන්න පුළුවන්!</p>
-                    <div class="metric-row">
-                        <div class="metric-item"><span class="metric-num">Rs. 5,000</span><span class="metric-lbl">ප්‍රමාණවත් ආරම්භයක්</span></div>
-                        <div class="metric-item"><span class="metric-num">Direct</span><span class="metric-lbl">No Middlemen</span></div>
-                    </div>
-                </div>
-                <div class="value-visual" style="background: #fff8f4;">
-                    <h4 style="font-weight: 700; margin-bottom: 12px; color: #0f172a; line-height: 1.4;">Sourcing Cost Target</h4>
-                    <div style="width: 100%; height: 8px; background: #e2e8f0; border-radius: 10px; margin-bottom: 12px; overflow: hidden;"><div style="width: 85%; height: 100%; background: var(--orange-main);"></div></div>
-                    <p style="font-size: 0.95rem; font-weight:600; color: var(--orange-main);">85%ක් සාමාන්‍ය වෙළඳපොළ මිලට වඩා ලාභදායී වේ.</p>
-                </div>
-            </div>
-
-            <!-- Breakdown 3 -->
-            <div class="value-block">
-                <div class="value-content">
-                    <div class="value-icon-box"><i class="fa-solid fa-mobile-screen-button"></i></div>
-                    <h3>ලැප්ටොප් ඕනේ නැහැ, ළඟ තියෙන ස්මාර්ට් ෆෝන් එක විතරක් හොඳටම ඇති</h3>
-                    <p>මේ බිස්නස් එක කරන්නයි, කෝස් එක ඉගෙන ගන්නයි ඔයාට ගණන් අධික ලැප්ටොප් හෝ පරිගණක අවශ්‍ය වෙන්නේ නැහැ. ඔයා දැනට පාවිච්චි කරන ස්මාර්ට් ෆෝන් එකෙන්ම බඩු සොයන හැටි, ඕඩර් කරන හැටි, Facebook Ads දාන හැටි සහ Customersලා හැන්ඩ්ල් කරන හැටි ඔක්කොම මේකේ තියෙනවා.</p>
-                </div>
-                <div class="value-visual">
-                    <div style="display: flex; justify-content: space-around; font-size: 2.5rem; color: var(--orange-main); margin-bottom: 10px;">
-                        <i class="fa-brands fa-android"></i>
-                        <i class="fa-brands fa-apple"></i>
-                    </div>
-                    <p style="text-align: center; font-weight: 700; font-size: 0.95rem; margin-bottom: 0;">සෑම දුරකථනයකටම 100% ගැළපේ</p>
-                </div>
-            </div>
-
-            <!-- Breakdown 4 -->
-            <div class="value-block">
-                <div class="value-content">
-                    <div class="value-icon-box"><i class="fa-solid fa-clock-rotate-left"></i></div>
-                    <h3>Lifetime Access + Live Zoom Meetings</h3>
-                    <p>වීඩියෝ ටික විතරක් දීලා අපි ඔයාව තනි කරන්නේ නැහැ. මාකට් එක වෙනස් වෙද්දී හැම සති දෙකකට වරක්ම අලුත් අප්ඩේට් වීඩියෝ කෝස් එකට නොමිලේම එකතු වෙනවා. ඒ වගේම ඔයාට එන ඕනෑම ගැටලුවක් ලයිව්ම අහලා විසඳගන්න හැමමාසෙකම "Live Zoom Q&A Sessions" පවත්වනවා.</p>
-                    <div class="metric-row">
-                        <div class="metric-item"><span class="metric-num">24/7</span><span class="metric-lbl">Lifetime Access</span></div>
-                        <div class="metric-item"><span class="metric-num">Monthly</span><span class="metric-lbl">Live Zoom Q&A</span></div>
-                    </div>
-                </div>
-                <div class="value-visual" style="background: #0f172a; color: white;">
-                    <h4 style="color: var(--orange-main); font-weight: 700; margin-bottom: 8px; line-height: 1.4;">OBI Community VIP Support</h4>
-                    <p style="font-size: 0.96rem; color: #94a3b8; margin-bottom: 0;">ව්‍යාපාරය ආරම්භ කළ පසු මුහුණ දෙන ප්‍රායෝගික ගැටළු සඳහා කණ්ඩායම් සහාය.</p>
-                </div>
-            </div>
-
-            <!-- Breakdown 5 -->
-            <div class="value-block">
-                <div class="value-content">
-                    <div class="value-icon-box"><i class="fa-solid fa-brain"></i></div>
-                    <h3>කෘතිම බුද්ධිය (AI Tools) හරහා බිස්නස් එක ලේසි කරගමු</h3>
-                    <p>වර්තමාන තරඟකාරී ලෝකයේ හැමදේම තනියම ලියා ලියා ඉන්න වෙලාවක් නැහැ. ChatGPT වැනි සුපිරි AI මෙවලම් පාවිච්චි කරලා, බඩු වලට ආකර්ෂණීය විස්තර (Product Descriptions) ලියාගන්නා හැටි සහ විනාඩියෙන් ඉහළ විකුණුම් ගෙනෙන ඇඩ් කොපි හදාගන්නා හැටි ප්‍රායෝගිකවම ඉගෙන ගන්න.</p>
-                </div>
-                <div class="value-visual">
-                    <div style="background: rgba(255,107,0,0.04); border-radius:12px; padding:15px; border: 1px dashed var(--orange-main); font-family: monospace; font-size: 0.85rem; color: #334155; margin-bottom: 0;">
-                        🚀 Prompt: "Generate high-converting e-commerce copy for my trending Alibaba product..."
+                    <div class="metric-item">
+                        <span class="metric-num">300%+</span>
+                        <span class="metric-lbl">Profit Margin</span>
                     </div>
                 </div>
             </div>
-
+            <div class="value-visual">
+                <p><b>සාමාන්‍ය ක්‍රමය:</b> නිෂ්පාදකයා → චීන තොග වෙළෙන්දා → ලංකාවේ පිටකොටුවේ කඩේ → ඔයා → පාරිභෝගිකයා (ලාභය ඉතා අඩුයි)</p>
+                <div class="visual-badge-box">
+                    <i class="fa-solid fa-circle-check" style="color: #10b981;"></i>
+                    <span><b>OBI ක්‍රමය:</b> Alibaba නිෂ්පාදකයා ➔ ඔයා ➔ පාරිභෝගිකයා (අතරමැදි වියදම් නැත!)</span>
+                </div>
+            </div>
         </div>
-    </section>
 
-    <!-- Certificate Section -->
-    <section class="certificate-section" style="background: var(--bg-subtle);">
-        <div class="container">
-            <h2 class="section-title">කෝස් එක ඉවර කළාම ලැබෙන <span>නිල සහතිකය</span></h2>
-            <p class="section-subtitle">කෝස් එකේ වීඩියෝ මොඩියුලයන් ඔක්කොම සාර්ථකව බලලා ඉවර කරන හැම කෙනෙක්ටම, OBI ආයතනයෙන් පිරිනමන සත්‍යාපනය කළ හැකි (Verified) වටිනා ඩිජිටල් සහතිකයක් හිමිවෙනවා.</p>
-            
-            <div class="cert-showcase-box">
-                <div class="cert-info">
-                    <div class="value-icon-box" style="background: rgba(255,107,0,0.1);"><i class="fa-solid fa-graduation-cap"></i></div>
-                    <h3 style="font-size: 1.6rem; font-weight:700; margin-bottom:15px; line-height: 1.4;">ඔයාගේ දැනුමට වටිනාකමක් දෙන්න</h3>
-                    <p style="color: var(--text-muted); font-size:1rem;">මෙම සහතිකය මගින් ඔබ Alibaba Sourcing සහ Smart Marketing පිළිබඳව මනා ප්‍රායෝගික දැනුමක් ලබා ඇති බව තහවුරු කරයි. මෙය ඔබගේ e-Commerce සන්නාමයේ විශ්වසනීයත්වය ඉහළ නැංවීමට මහෝපකාරී වේ.</p>
-                    <ul>
-                        <li><i class="fa-solid fa-circle-check"></i> Unique Verification ID එකක් අඩංගුයි.</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Orange & White Premium Theme එකකින් යුක්තයි.</li>
-                        <li><i class="fa-solid fa-circle-check"></i> LinkedIn හෝ Facebook එකට පහසුවෙන්ම දාන්න පුළුවන්.</li>
-                    </ul>
+        <!-- Block 2 (Certificate Showcase) -->
+        <div class="value-block">
+            <div class="value-content">
+                <div class="value-icon-box"><i class="fa-solid fa-graduation-cap"></i></div>
+                <h3>පිළිගත් OBI වෘත්තීය සහතිකය</h3>
+                <p>කෝස් එක සාර්ථකව අවසන් කරන සියලුම දෙනාට e-Commerce ක්ෂේත්‍රයේ රැකියාවලට හෝ ජාත්‍යන්තර ව්‍යාපාරික කටයුතුවලට අතිශය උපකාරී වන වටිනා සහතික පත්‍රයක් හිමිවේ.</p>
+                <ul>
+                    <li><i class="fa-solid fa-check"></i> සත්‍යාපනය කළ හැකි QR කේතය සහිතයි.</li>
+                    <li><i class="fa-solid fa-check"></i> LinkedIn සහ CV සඳහා එකතු කළ හැක.</li>
+                </ul>
+            </div>
+            <div class="value-visual" style="background: #ffffff; padding: 10px;">
+                <div class="cert-showcase-box">
+                    <div class="cert-preview">
+                        <span class="cert-badge-top">OBI VERIFIED</span>
+                        <!-- Mock Certificate SVG Graphic -->
+                        <svg viewBox="0 0 400 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="400" height="280" fill="#FCFCFD" rx="12"/>
+                            <rect x="10" y="10" width="380" height="260" rx="8" stroke="#E2E8F0" stroke-width="2" stroke-dasharray="4 4"/>
+                            <rect x="16" y="16" width="368" height="248" rx="6" stroke="#FF6B00" stroke-width="1" stroke-opacity="0.2"/>
+                            <text x="50%" y="60" dominant-baseline="middle" text-anchor="middle" font-family="'Plus Jakarta Sans'" font-weight="800" font-size="16" fill="#0F172A" letter-spacing="2">CERTIFICATE OF COMPLETION</text>
+                            <text x="50%" y="90" dominant-baseline="middle" text-anchor="middle" font-family="'Noto Sans Sinhala'" font-size="9" fill="#64748B">මෙමඟින් සාක්ෂි දරනු ලබන්නේ</text>
+                            <text x="50%" y="130" dominant-baseline="middle" text-anchor="middle" font-family="'Plus Jakarta Sans'" font-weight="700" font-size="20" fill="#FF6B00">YOUR NAME HERE</text>
+                            <line x1="80" y1="155" x2="320" y2="155" stroke="#E2E8F0" stroke-width="1"/>
+                            <text x="50%" y="180" dominant-baseline="middle" text-anchor="middle" font-family="'Noto Sans Sinhala'" font-size="9" fill="#475569">Alibaba Selling Master Course එක සාර්ථකව නිම කරන ලදී.</text>
+                            <!-- Badge graphic inside certificate -->
+                            <circle cx="200" cy="225" r="18" fill="#0F172A"/>
+                            <path d="M196 221L200 225L206 219" stroke="#FF6B00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
                 </div>
-                <div class="cert-preview">
-                    <div class="cert-badge-top">OBI Verified 2026</div>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560">
-                        <rect width="800" height="560" fill="#ffffff" rx="16"/>
-                        <rect x="20" y="20" width="760" height="520" fill="none" stroke="#ff6b00" stroke-width="2" stroke-opacity="0.2" rx="12"/>
-                        <rect x="32" y="32" width="736" height="496" fill="none" stroke="#ff6b00" stroke-width="3" rx="8"/>
-                        <g transform="translate(400, 90)">
-                            <text text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="12" fill="#ff6b00" letter-spacing="4">ONLINE BUSINESS INSTITUTE</text>
-                        </g>
-                        <text x="400" y="160" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="32" fill="#0f172a">CERTIFICATE OF COMPLETION</text>
-                        <text x="400" y="200" text-anchor="middle" font-family="'Noto Sans Sinhala', sans-serif" font-size="14" fill="#64748b">මෙම පාඨමාලාව සාර්ථකව නිමකිරීම වෙනුවෙන් පිරිනැමෙන නිල සහතිකය</text>
-                        <text x="400" y="250" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="500" font-size="13" fill="#94a3b8">PROUDLY PRESENTED TO</text>
-                        <text x="400" y="300" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="28" fill="#ff6b00">YOUR NAME HERE</text>
-                        <line x1="250" y1="315" x2="550" y2="315" stroke="#ff6b00" stroke-width="1" stroke-opacity="0.3"/>
-                        <text x="400" y="360" text-anchor="middle" font-family="'Noto Sans Sinhala', sans-serif" font-size="13" fill="#334155">Alibaba Selling Master Course එකට අදාළ සියලුම වීඩියෝ මොඩියුලයන් සහ ප්‍රායෝගික</text>
-                        <text x="400" y="382" text-anchor="middle" font-family="'Noto Sans Sinhala', sans-serif" font-size="13" fill="#334155">පරීක්ෂණ සාර්ථකව සම්පූර්ණ කිරීම වෙනුවෙන් පිරිනමන වෘත්තීය සහතිකයකි.</text>
-                        <g transform="translate(140, 470)">
-                            <line x1="0" y1="0" x2="160" y2="0" stroke="#0f172a" stroke-width="1" stroke-opacity="0.2"/>
-                            <text x="80" y="20" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="13" fill="#0f172a">OBI Director</text>
-                        </g>
-                        <g transform="translate(400, 465)">
-                            <circle r="20" fill="#ff6b00"/>
-                        </g>
-                        <g transform="translate(500, 470)">
-                            <line x1="0" y1="0" x2="160" y2="0" stroke="#0f172a" stroke-width="1" stroke-opacity="0.2"/>
-                            <text x="80" y="20" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="13" fill="#0f172a">Verification ID</text>
-                        </g>
-                    </svg>
-                </div>
+            </div>
+        </div>
+
+        <!-- Premium 100% Risk-Free Guarantee Box -->
+        <div class="premium-guarantee-container">
+            <div class="badge-wrapper">
+                <i class="fa-solid fa-award"></i>
+            </div>
+            <h3 class="guarantee-title">දින 14ක <span>100% මුදල් ආපසු ගෙවීමේ</span> සහතිකය</h3>
+            <p class="guarantee-text">කෝස් එක බලලා ඔයාට මේ ක්‍රමවේදය ගැන සෑහීමකට පත්වෙන්න බැරි නම්, කිසිදු ප්‍රශ්න කිරීමකින් තොරව ඔයා ගෙවපු මුදල සම්පූර්ණයෙන්ම දින 14ක් ඇතුළත නැවත ලබාගන්න පුළුවන්. Risk එක සම්පූර්ණයෙන්ම අපේ පැත්තෙන්!</p>
+            <div class="trust-footer-tags">
+                <span class="trust-tag"><i class="fa-solid fa-lock"></i> Secure Payment</span>
+                <span class="trust-tag"><i class="fa-solid fa-rotate-left"></i> 14-Day Refund</span>
+                <span class="trust-tag"><i class="fa-solid fa-user-shield"></i> Verified Institute</span>
             </div>
         </div>
     </section>
 
-
-            <!-- Money Back Guarantee Box -->
-            <div class="premium-guarantee-container">
-                <div class="badge-wrapper">
-                    <i class="fa-solid fa-award"></i>
-                </div>
-                <h3 class="guarantee-title">දවස් 14ක <span>100% සල්ලි ආපසු දෙන</span> සුපිරි සහතිකය!</h3>
-                <p class="guarantee-text">
-                    මේ කෝස් එක අරන් දවස් 14ක් ඇතුළත, ඔයා ගෙවපු සල්ලි වලට වඩා වැඩි වටිනාකමක් මේකෙන් ලැබුණේ නැහැ කියලා හිතෙනවා නම්, කිසිම ප්‍රශ්නයක් අහන්නේ නැතුව ඔයා ගෙවපු සම්පූර්ණ මුදලම අපි ආපහු දෙනවා. ලංකාවේ මේ වගේ 100% Risk-Free සහතිකයක් දෙන පළමු සහ එකම ආයතනය OBI විතරයි!
-                </p>
-                <div class="trust-footer-tags">
-                    <span class="trust-tag">100% Risk-Free Guarantee</span>
-                    <span class="trust-tag">Verified by OBI</span>
-                </div>
-            </div>
+    <!-- Who is this for? -->
+    <section class="container">
+        <h2 class="section-title">මේ කෝස් එක <span>කාටද ගැලපෙන්නේ?</span></h2>
+        <p class="section-subtitle">විශේෂ දැනුමක් අවශ්‍ය නැත, උනන්දුවක් පවතී නම් ඔබටත් කළ හැක.</p>
+        <div class="audience-grid">
+            <div class="audience-card"><i class="fa-solid fa-user-tie style-icon" style="font-size: 1.8rem; color: #ff6b00;"></i><p>රැකියාවක් කරන ගමන් අමතර ආදායමක් (Side Hustle) සොයන අයට</p></div>
+            <div class="audience-card"><i class="fa-solid fa-graduation-cap style-icon" style="font-size: 1.8rem; color: #ff6b00;"></i><p>අධ්‍යාපනය අවසන් කර තමන්ගේම ව්‍යාපාරයක් කරන්න බලාපොරොත්තු වන තරුණ තරුණියන්ට</p></div>
+            <div class="audience-card"><i class="fa-solid fa-house-user style-icon" style="font-size: 1.8rem; color: #ff6b00;"></i><p>ගෙදර ඉඳන්ම ස්වාධීනව ලොකු ආදායමක් උපයන්න කැමති ගෘහණියන්ට</p></div>
         </div>
-</section>
+    </section>
 
-    <!-- COURSE PRICING & SUMMARY CARD SECTION -->
+    <!-- Pricing Section -->
     <section class="pricing-section" id="enrollment">
         <div class="container">
-            <h2 class="section-title">පාඨමාලා ගාස්තුව සහ <span>ඇතුළත් සියලුම දේ</span></h2>
-            <p class="section-subtitle">කිසිදු සැඟවුණු ගාස්තුවක් නොමැත. එකවරක් පමණක් ගෙවා ජීවිත කාලය පුරාවටම ඉගෙන ගන්න.</p>
+            <h2 class="section-title">අදම <span>වැඩේ පටන් ගමු</span></h2>
+            <p class="section-subtitle">සීමිත කාලීන විශේෂ දීමනාව. මිල ඉහළ යාමට පෙර ඔබේ අවස්ථාව වෙන් කරවා ගන්න.</p>
             
             <div class="pricing-card">
                 <div class="pricing-header">
-                    <h3>Alibaba Selling Master Course</h3>
-                    <div class="price-display">Rs. 10,900</div>
-                    <span class="price-sub">One-time Payment / Lifetime Access</span>
+                    <h3>Siamat Full Course Access</h3>
+                    <div class="price-display">Rs. 4,900</div>
+                    <span class="price-sub">One-time payment • Lifetime Access</span>
                 </div>
                 <div class="pricing-body">
-                    <h4>ඔයාට ලැබෙන දේවල් </h4>
+                    <h4>ඇතුළත් සියල්ල:</h4>
                     <ul class="summary-list">
-                        <li><i class="fa-solid fa-circle-check"></i> Complete HD Video Modules 06 (මුල සිට සරලව)</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Alibaba Sourcing & Shipping රහස් ක්‍රමවේද</li>
-                        <li><i class="fa-solid fa-circle-check"></i> ලංකාවේ විශ්වාසවන්තම Customs Agents සහ Clearing Lines සම්බන්ධතා</li>
-                        <li><i class="fa-solid fa-circle-check"></i> ලංකාවේ අඩුවටම බඩු දෙන Local Wholesale Suppliers ලැයිස්තුව</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Canva Pro නිල ගිණුම (Social Media Posts සෑදීමට)</li>
-                        <li><i class="fa-solid fa-circle-check"></i> CapCut Pro Premium මෙවලම් (Video Ads සෑදීමට)</li>
-                        <li><i class="fa-solid fa-circle-check"></i> WhatsApp CRM Tool (BULK Messages සහ Auto-Reply සඳහා)</li>
-                        <li><i class="fa-solid fa-circle-check"></i> මසකට වරක් පැවැත්වෙන Live Zoom Q&A සාකච්ඡා</li>
-                        <li><i class="fa-solid fa-circle-check"></i> OBI ආයතනයෙන් පිරිනමන Verified නිල සහතිකය</li>
-                        <li><i class="fa-solid fa-circle-check"></i> දින 14ක 100% මුදල් ආපසු ගෙවීමේ සහතිකය</li>
+                        <li><i class="fa-solid fa-circle-check"></i> සම්පූර්ණ මොඩියුල 6ම (HD වීඩියෝ මාලාව)</li>
+                        <li><i class="fa-solid fa-circle-check"></i> චීන Shipping Agents ලාගේ VIP දුරකථන අංක</li>
+                        <li><i class="fa-solid fa-circle-check"></i> ලංකාවේ Courier Services ප්‍රධානීන්ගේ සම්බන්ධතා</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Premium Product Research Softwares</li>
+                        <li><i class="fa-solid fa-circle-check"></i> High-Converting Ad Templates</li>
+                        <li><i class="fa-solid fa-circle-check"></i> අවුරුද්දක් පුරා වලංගු Private Group සහාය</li>
+                        <li><i class="fa-solid fa-circle-check"></i> OBI ආයතනයෙන් පිරිනමන වෘත්තීය සහතිකය</li>
                     </ul>
                 </div>
                 <div class="pricing-footer">
-                    <a href="https://wa.me/+94774576448" target="_blank" class="btn btn-orange" style="width: 100%;">
-                        <i class="fa-brands fa-whatsapp" style="font-size: 1.5rem;"></i> දැන්ම සම්බන්ධ වී ලියාපදිංචි වන්න
-                    </a>
+                    <a href="#" class="btn btn-orange" style="width: 100%;">දැන්ම සම්බන්ධ වෙන්න (Enroll Now) <i class="fa-solid fa-cart-shopping"></i></a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Call To Action (CTA) Section -->
+    <!-- CTA Section -->
     <section class="cta-section">
         <div class="container">
-            <h2>ඔයාගෙම E-commerce බිස්නස් එක අදම පටන් ගමු!</h2>
-            <p>තව හිත හිත කාලය නාස්ති කරන්න එපා. OBI (Online Business Institute) එකත් එක්ක සෙට් වෙලා අදම ඔයාගේ සාර්ථක ගමන පටන් ගන්න!</p>
-            <a href="https://wa.me/+94774576448" target="_blank" class="btn btn-orange">
-                <i class="fa-brands fa-whatsapp" style="font-size: 1.5rem;"></i> WhatsApp එකෙන් දැන්ම මැසේජ් එකක් දාන්න
-            </a>
+            <h2>ඔබ තවමත් හිත හිත ඉන්නවාද?</h2>
+            <p>කාලය කියන්නේ රත්තරන්. අද ඔයා ගන්න එක එක තීරණයක් ඔයාගේ හෙට දවස සම්පූර්ණයෙන්ම වෙනස් කරන්න පුළුවන්. ලංකාවේ ඊ-කොමර්ස් ක්ෂේත්‍රයේ පෙරළියක් කරන්න OBI සමඟ අදම එකතු වෙන්න.</p>
+            <a href="#enrollment" class="btn btn-orange">සියලුම විස්තර සහිතව කෝස් එක ගන්න</a>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 OBI (Online Business Institute). All Rights Reserved.</p>
+        <div class="container" style="padding: 0;">
+            <p>&copy; 2026 OBI Education. All Rights Reserved. Designed for Alibaba Selling Master Course.</p>
+        </div>
     </footer>
 
 </body>
