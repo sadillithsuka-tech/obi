@@ -408,52 +408,54 @@
             </div>
         </div>
     </section>
-    <!-- FAQ SPECIFIC QUESTION SECTION -->
-    <section class="faq-specific-section" style="background: #ffffff; padding: 60px 0; border-bottom: 1px solid var(--border-light);">
-        <div class="container" style="padding: 0; max-width: 850px;">
-            
-            <div style="background: #fffbeb; border: 1px solid #fef3c7; border-left: 6px solid var(--orange-main); padding: 35px; border-radius: 24px; box-shadow: 0 15px 30px rgba(255, 107, 0, 0.02);">
-                
-                <!-- The Question -->
-                <div style="display: flex; gap: 16px; align-items: flex-start; margin-bottom: 20px;">
-                    <div style="background: var(--orange-gradient); color: white; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; shrink: 0; font-family: 'Plus Jakarta Sans', sans-serif;">Q</div>
-                    <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--text-dark); line-height: 1.5; margin: 0; padding-top: 3px;">
-                        "මම ළඟ මේ වෙලාවේ කෝස් ෆී (Course Fee) එකට අමතරව බඩු ගන්නවත් සල්ලි නෑ. එතකොට මට මේ බිස්නස් එක කරන්න බැරිද?"
-                    </h3>
+   <section class="faq-accordion-section" style="padding: 80px 0; background: #ffffff;">
+    <div class="container" style="max-width: 800px; margin: 0 auto;">
+        
+        <!-- Accordion Item 1 -->
+        <div class="faq-item" style="border-bottom: 1px solid #e2e8f0; margin-bottom: 10px;">
+            <button class="faq-trigger" onclick="toggleFaq(this)" style="width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 25px 0; background: none; border: none; cursor: pointer; text-align: left; outline: none;">
+                <span style="font-size: 1.15rem; font-weight: 700; color: var(--text-dark);">"කෝස් ෆී එකට අමතරව බඩු ගන්න සල්ලි නැත්නම් බිස්නස් එක කරන්නේ කොහොමද?"</span>
+                <i class="fa-solid fa-chevron-down" style="color: var(--orange-main); transition: transform 0.3s;"></i>
+            </button>
+            <div class="faq-content" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out; color: var(--text-muted); line-height: 1.8;">
+                <div style="padding-bottom: 25px;">
+                    <p style="margin-bottom: 15px;">මේක බොහෝ දෙනෙක්ට තියෙන ගැටලුවක්. ඒ නිසාම අපි කෝස් එක ඇතුළේ විසඳුම් 2ක් දීලා තියෙනවා:</p>
+                    <ul style="list-style: none; padding-left: 0;">
+                        <li style="margin-bottom: 12px;"><i class="fa-solid fa-check" style="color: var(--orange-main); margin-right: 8px;"></i> <b>Local Wholesale Contacts:</b> චීනයෙන් බඩු ගෙන්නනකල් ඉන්න ඕනේ නෑ. Alibaba මිලටම ලංකාව ඇතුළෙන්ම (Wholesale price) බඩු ගන්න පුළුවන් අපේ VIP Local Sellers ලගේ සම්බන්ධතා අපි ඔයාට දෙනවා. බඩු 5ක් 10ක් වුණත් අරන් වැඩේ පටන් ගන්න පුළුවන්.</li>
+                        <li><i class="fa-solid fa-check" style="color: var(--orange-main); margin-right: 8px;"></i> <b>Free Marketing Strategies:</b> Ads වලට සල්ලි නැද්ද? ප්‍රශ්නයක් නෑ! TikTok සහ Reels හරහා සතයක්වත් වියදම් නොකර (Organic) දිනපතා ඕඩර්ස් ගන්නා රහස් ක්‍රම අපි වෙනම මොඩියුලයකින් කියලා දෙනවා.</li>
+                    </ul>
                 </div>
-
-                <!-- Horizontal Divider -->
-                <hr style="border: 0; border-top: 1px solid #fedebe; margin-bottom: 20px;">
-
-                <!-- The Answer -->
-                <div style="display: flex; gap: 16px; align-items: flex-start;">
-                    <div style="background: #0f172a; color: white; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; shrink: 0; font-family: 'Plus Jakarta Sans', sans-serif;">A</div>
-                    <div style="font-size: 1rem; color: var(--text-dark); line-height: 1.8; padding-top: 3px;">
-                        <p style="font-weight: 700; color: #166534; margin-bottom: 12px; font-size: 1.1rem;">
-                            <i class="fa-solid fa-circle-check"></i> නැහැ, ඔබටත් මේක ඉතාමත් පහසුවෙන් කරන්න පුළුවන්! ඒකට අපි කෝස් එක ඇතුළේ සුපිරි විසඳුම් 2ක් දීලා තියෙනවා:
-                        </p>
-                        
-                        <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 16px;">
-                            <li style="display: flex; align-items: flex-start; gap: 10px;">
-                                <i class="fa-solid fa-check" style="color: var(--orange-main); margin-top: 6px; font-size: 0.9rem;"></i>
-                                <span><b>01. ලංකාවේ VIP Local Sellers සම්බන්ධතා:</b> චීනයෙන් බඩු එනකල් ඉන්න හෝ මුලින්ම නැව් ගාස්තු ගෙවන්න ඔයාට සල්ලි නැත්නම්, <b>Alibaba එකේ තියෙන මිලටම ලංකාව ඇතුළෙන්ම (Wholesale Price)</b> බඩු ගන්න පුළුවන් ලංකාවේ ප්‍රධාන තොග වෙළෙන්දන්ගේ VIP දුරකථන අංක අපි ඔයාට දෙනවා. ඔයාට පුළුවන් அவම ප්‍රමාණයකින් (උදාහරණයක් ලෙස බඩු 5ක් හෝ 10ක්) ඔවුන්ගෙන් අරන් වැඩේ පටන් ගන්න.</span>
-                            </li>
-                            <li style="display: flex; align-items: flex-start; gap: 10px;">
-                                <i class="fa-solid fa-check" style="color: var(--orange-main); margin-top: 6px; font-size: 0.9rem;"></i>
-                                <span><b>02. රුපියලක්වත් නොයන Free Marketing ක්‍රමවේද:</b> Facebook හෝ TikTok Ads වලට සල්ලි යට කරන්නම ඕනේ නැහැ. සතයක්වත් වියදම් නොකර TikTok Videos, Reels සහ Facebook Organic Traffic (නොමිලේ මාකට් කරන ක්‍රම) හරහා දිනපතා ඕඩර්ස් 10-15ක් ගන්නා රහසිගත ක්‍රමවේද අපි මේ කෝස් එකේ වෙනමම මොඩියුලයකින් කියලා දෙනවා.</span>
-                            </li>
-                        </ul>
-
-                        <p style="margin-top: 16px; font-weight: 600; color: var(--text-muted); font-size: 0.95rem;">
-                            ඒ නිසා අතේ අමතර සල්ලි නැහැ කියලා බය වෙන්න එපා. කෝස් එකෙන් දෙන මේ දැනුම සහ Contacts විතරක් පාවිච්චි කරලා, බිංදුවෙන් පටන් අරන් සල්ලි කරකවලා බිස්නස් එක ලොකු කරගන්න ඔයාට සම්පූර්ණ අවස්ථාව තියෙනවා!
-                        </p>
-                    </div>
-                </div>
-
             </div>
-            
         </div>
-    </section>
+
+        <!-- තව ප්‍රශ්න ඕනේ නම් මෙතනින් පහළට තවත් .faq-item එකක් එකතු කරන්න -->
+
+    </div>
+
+    <script>
+        function toggleFaq(btn) {
+            const content = btn.nextElementSibling;
+            const icon = btn.querySelector('i');
+            
+            // Close others if you want only one open at a time
+            document.querySelectorAll('.faq-content').forEach(item => {
+                if(item !== content) {
+                    item.style.maxHeight = null;
+                    item.previousElementSibling.querySelector('i').style.transform = 'rotate(0deg)';
+                }
+            });
+
+            // Toggle current
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+                icon.style.transform = 'rotate(0deg)';
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+                icon.style.transform = 'rotate(180deg)';
+            }
+        }
+    </script>
+</section>
     <!-- PROFIT CALCULATION SECTION -->
     <section class="calculation-section">
         <div class="container">
