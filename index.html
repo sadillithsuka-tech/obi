@@ -7,7 +7,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&family=Noto+Sans+Sinhala:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&family=Noto+Sans+Sinhala:wght@400;500;700;900&display=swap" rel="stylesheet">
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
@@ -32,12 +32,18 @@
         }
 
         body {
-            font-family: 'Plus Jakarta Sans', 'Noto Sans Sinhala', sans-serif;
+            font-family: 'Noto Sans Sinhala', 'Plus Jakarta Sans', sans-serif;
             background-color: var(--bg-body);
             color: var(--text-dark);
-            line-height: 1.6;
+            /* සිංහල අකුරු එක උඩ එක වැදීම වැළැක්වීමට line-height එක 1.8 දක්වා වැඩි කළා */
+            line-height: 1.8;
             overflow-x: hidden;
             scroll-behavior: smooth;
+        }
+
+        /* සියලුම සිංහල text සඳහා අකුරු ළං වීම වැළැක්වීමට සුළු පරතරයක් එකතු කළා */
+        p, span, h1, h2, h3, h4, li {
+            letter-spacing: 0.2px;
         }
 
         ::-webkit-scrollbar { width: 8px; }
@@ -108,9 +114,9 @@
             text-align: center;
             margin-bottom: 20px;
             font-weight: 700;
-            letter-spacing: -1px;
+            letter-spacing: -0.5px;
             color: var(--text-dark);
-            line-height: 1.3;
+            line-height: 1.4;
         }
 
         .section-title span { color: var(--orange-main); }
@@ -121,6 +127,7 @@
             font-size: 1.1rem;
             max-width: 700px;
             margin: 0 auto 50px auto;
+            line-height: 1.8;
         }
 
         /* Header */
@@ -144,7 +151,7 @@
             align-items: center;
         }
 
-        .logo { font-size: 1.6rem; font-weight: 700; color: white; }
+        .logo { font-size: 1.6rem; font-weight: 700; color: white; font-family: 'Plus Jakarta Sans', sans-serif; }
         .logo span { color: var(--orange-main); }
 
         /* Hero */
@@ -160,9 +167,8 @@
         .hero h1 {
             font-size: 3.4rem;
             font-weight: 700;
-            line-height: 1.25;
+            line-height: 1.4;
             margin-bottom: 24px;
-            letter-spacing: -1px;
         }
 
         .hero h1 span {
@@ -172,7 +178,7 @@
         }
 
         .hero h1 em { font-style: normal; color: var(--orange-main); }
-        .hero p { font-size: 1.15rem; color: #94a3b8; max-width: 850px; margin: 0 auto 40px auto; line-height: 1.7; }
+        .hero p { font-size: 1.15rem; color: #94a3b8; max-width: 850px; margin: 0 auto 40px auto; line-height: 1.8; }
 
         /* PROFIT CALCULATION LAYOUT */
         .calculation-section { background: #fffbf7; border-bottom: 1px solid rgba(255, 107, 0, 0.05); }
@@ -182,9 +188,9 @@
         .calc-step-card .icon-wrap { width: 64px; height: 64px; background: rgba(255,107,0,0.06); color: var(--orange-main); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px auto; font-size: 1.6rem; }
         .calc-step-card.final-profit .icon-wrap { background: rgba(255,255,255,0.2); color: white; }
         .calc-step-card h3 { font-size: 1.3rem; margin-bottom: 10px; font-weight: 700; }
-        .calc-step-card .price-tag { font-size: 2.2rem; font-weight: 800; color: var(--text-dark); margin-bottom: 15px; }
+        .calc-step-card .price-tag { font-size: 2.2rem; font-weight: 800; color: var(--text-dark); margin-bottom: 15px; font-family: 'Plus Jakarta Sans', sans-serif; }
         .calc-step-card.final-profit .price-tag { color: white; font-size: 2.6rem; }
-        .calc-step-card p { font-size: 0.95rem; color: var(--text-muted); line-height: 1.6; }
+        .calc-step-card p { font-size: 0.95rem; color: var(--text-muted); line-height: 1.7; }
         .calc-step-card.final-profit p { color: rgba(255,255,255,0.9); }
         
         .calc-summary-bar { background: #0f172a; color: white; border-radius: 20px; padding: 25px; margin-top: 40px; display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap; gap: 20px; text-align: center; }
@@ -192,14 +198,14 @@
         .summary-item p { font-size: 0.9rem; color: #94a3b8; font-weight: 600; }
 
         /* Strategic Objections & Vision Boxes */
-        .objection-handler-box { background: #f0fdf4; border: 1px solid #bbf7d0; color: #166534; padding: 25px; border-radius: 20px; margin-top: 30px; font-size: 1.05rem; font-weight: 600; line-height: 1.6; }
-        .vision-multiplier-box { background: #eff6ff; border: 1px solid #bfdbfe; color: #1e40af; padding: 25px; border-radius: 20px; margin-top: 20px; font-size: 1.05rem; font-weight: 600; line-height: 1.6; }
+        .objection-handler-box { background: #f0fdf4; border: 1px solid #bbf7d0; color: #166534; padding: 25px; border-radius: 20px; margin-top: 30px; font-size: 1.05rem; font-weight: 600; line-height: 1.8; }
+        .vision-multiplier-box { background: #eff6ff; border: 1px solid #bfdbfe; color: #1e40af; padding: 25px; border-radius: 20px; margin-top: 20px; font-size: 1.05rem; font-weight: 600; line-height: 1.8; }
 
         /* Step by Step Flow (NO ICONS) */
         .process-section { background: var(--bg-body); }
         .process-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 40px 24px; margin-top: 40px; }
         .process-card { background: var(--bg-subtle); border: 1px solid var(--border-light); padding: 50px 30px 40px 30px; border-radius: 24px; position: relative; }
-        .process-step-num { font-size: 3rem; font-weight: 900; background: linear-gradient(135deg, #ff6b00, #ffaa66); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1; margin-bottom: 15px; display: block; }
+        .process-step-num { font-size: 3rem; font-weight: 900; background: linear-gradient(135deg, #ff6b00, #ffaa66); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1; margin-bottom: 15px; display: block; font-family: 'Plus Jakarta Sans', sans-serif; }
         .process-card h3 { font-size: 1.35rem; margin-bottom: 12px; font-weight: 700; }
 
         /* Modules Section */
@@ -207,76 +213,122 @@
         .modules-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
         .module-card { background: var(--card-light); border: 1px solid var(--border-light); border-radius: 24px; padding: 35px 30px; position: relative; }
         .module-meta { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
-        .module-tag { color: var(--orange-main); font-weight: 700; font-size: 0.85rem; text-transform: uppercase; }
-        .video-badge { background: rgba(255, 107, 0, 0.06); color: var(--orange-main); font-size: 0.75rem; padding: 4px 10px; border-radius: 6px; font-weight: 700; border: 1px solid rgba(255, 107, 0, 0.15); display: inline-flex; align-items: center; gap: 6px; }
+        .module-tag { color: var(--orange-main); font-weight: 700; font-size: 0.85rem; text-transform: uppercase; font-family: 'Plus Jakarta Sans', sans-serif; }
+        .video-badge { background: rgba(255, 107, 0, 0.06); color: var(--orange-main); font-size: 0.75rem; padding: 4px 10px; border-radius: 6px; font-weight: 700; border: 1px solid rgba(255, 107, 0, 0.15); display: inline-flex; align-items: center; gap: 6px; font-family: 'Plus Jakarta Sans', sans-serif; }
         .module-card h3 { font-size: 1.4rem; margin-bottom: 12px; font-weight: 700; }
         
         /* Shipping Alert Banner */
-        .highlight-alert { background: #fffbeb; border: 1px solid #fef3c7; color: #b45309; font-size: 0.9rem; padding: 12px 16px; border-radius: 14px; margin-top: 15px; font-weight: 600; display: flex; gap: 10px; align-items: center; line-height: 1.5; }
+        .highlight-alert { background: #fffbeb; border: 1px solid #fef3c7; color: #b45309; font-size: 0.95rem; padding: 16px; border-radius: 14px; margin-top: 15px; font-weight: 500; display: flex; gap: 12px; align-items: flex-start; line-height: 1.7; }
 
         /* VIP Contacts Banner */
         .contacts-highlight-banner { background: #0f172a; color: white; border-radius: 24px; padding: 40px; margin-top: 50px; display: flex; align-items: center; gap: 30px; border-left: 6px solid var(--orange-main); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
         .contacts-icon { font-size: 3rem; color: var(--orange-main); shrink: 0; background: rgba(255,107,0,0.1); width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; border-radius: 20px; }
         .contacts-text h3 { font-size: 1.6rem; margin-bottom: 8px; color: white; font-weight: 700; }
-        .contacts-text p { color: #94a3b8; font-size: 1rem; line-height: 1.6; }
+        .contacts-text p { color: #94a3b8; font-size: 1rem; line-height: 1.8; }
 
         /* FREE SOFTWARE BONUSES SECTION */
         .bonus-section { background: #fffdfa; border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light); }
         .bonus-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-top: 20px; }
         .bonus-card { background: white; border: 2px dashed #e2e8f0; padding: 35px 30px; border-radius: 24px; transition: all 0.3s ease; }
         .bonus-card:hover { border-color: var(--orange-main); background: #fffbf7; }
-        .bonus-tag { background: #ff6b00; color: white; font-size: 0.75rem; font-weight: 800; padding: 4px 12px; border-radius: 100px; display: inline-block; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .bonus-tag { background: #ff6b00; color: white; font-size: 0.75rem; font-weight: 800; padding: 4px 12px; border-radius: 100px; display: inline-block; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 0.5px; font-family: 'Plus Jakarta Sans', sans-serif; }
         .bonus-card h3 { font-size: 1.4rem; margin-bottom: 12px; font-weight: 700; color: var(--text-dark); }
-        .bonus-card p { font-size: 0.95rem; color: var(--text-muted); line-height: 1.6; }
+        .bonus-card p { font-size: 0.95rem; color: var(--text-muted); line-height: 1.8; }
 
         /* Modern Value Explainer Layouts */
         .value-block { display: flex; align-items: center; gap: 50px; margin-bottom: 80px; }
         .value-block:last-child { margin-bottom: 0; }
         .value-block:nth-child(even) { flex-direction: row-reverse; }
         .value-content { flex: 1; }
-        .value-visual { flex: 1; background: var(--bg-subtle); border: 1px solid var(--border-light); border-radius: 28px; padding: 35px; display: flex; flex-direction: column; justify-content: center; position: relative; overflow: hidden; width: 100%; }
+        
+        /* image_2337a4.png හි ඇති පරිදි සිංහල අකුරු එකිනෙක ගැටීම වැළැක්වීමට මෙහි line-height සහ padding සකස් කළා */
+        .value-visual { 
+            flex: 1; 
+            background: var(--bg-subtle); 
+            border: 1px solid var(--border-light); 
+            border-radius: 28px; 
+            padding: 40px 35px; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            position: relative; 
+            overflow: hidden; 
+            width: 100%; 
+        }
+        .value-visual p {
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        /* "අතරමැදි වියදම් නැත" ඇතුළත් කොටුවේ line-height සහ padding නිවැරදි කිරීම */
+        .visual-badge-box {
+            background: white; 
+            padding: 16px 20px; 
+            border-radius: 14px; 
+            font-weight: 700; 
+            border: 1px solid #e2e8f0; 
+            font-size: 0.95rem; 
+            display: flex; 
+            align-items: center; 
+            gap: 12px;
+            line-height: 1.6;
+        }
+
         .value-icon-box { width: 56px; height: 56px; background: rgba(255, 107, 0, 0.08); border-radius: 18px; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; color: var(--orange-main); margin-bottom: 20px; }
-        .value-content h3 { font-size: 1.85rem; font-weight: 700; margin-bottom: 16px; letter-spacing: -0.5px; line-height: 1.3; }
-        .value-content p { font-size: 1.05rem; color: var(--text-muted); line-height: 1.7; }
+        .value-content h3 { font-size: 1.85rem; font-weight: 700; margin-bottom: 16px; line-height: 1.4; }
+        .value-content p { font-size: 1.05rem; color: var(--text-muted); line-height: 1.8; }
         
         /* Highlight figures */
         .metric-row { display: flex; gap: 16px; margin-top: 24px; width: 100%; }
         .metric-item { background: white; border: 1px solid var(--border-light); padding: 14px 20px; border-radius: 14px; flex: 1; box-shadow: 0 10px 25px rgba(0,0,0,0.01); }
-        .metric-num { font-size: 1.75rem; font-weight: 800; color: var(--orange-main); display: block; margin-bottom: 2px; }
+        .metric-num { font-size: 1.75rem; font-weight: 800; color: var(--orange-main); display: block; margin-bottom: 2px; font-family: 'Plus Jakarta Sans', sans-serif; }
         .metric-lbl { font-size: 0.8rem; color: var(--text-muted); font-weight: 600; }
 
         /* Certificate Box */
         .cert-showcase-box { background: white; border: 1px solid rgba(255, 107, 0, 0.12); border-radius: 28px; padding: 40px; display: flex; align-items: center; gap: 40px; box-shadow: 0 20px 50px rgba(0,0,0,0.01); }
         .cert-info { flex: 1.1; }
         .cert-preview { flex: 1.9; background: #fafafa; border-radius: 20px; border: 1px solid #e2e8f0; padding: 10px; box-shadow: 0 15px 35px rgba(0,0,0,0.03); position: relative; width: 100%; max-width: 100%; height: auto; }
-        .cert-badge-top { position: absolute; top: -12px; right: 15px; background: #0f172a; color: white; padding: 6px 14px; border-radius: 100px; font-size: 0.75rem; font-weight: 700; box-shadow: 0 8px 16px rgba(0,0,0,0.1); border: 1px solid rgba(255,255,255,0.1); }
+        .cert-badge-top { position: absolute; top: -12px; right: 15px; background: #0f172a; color: white; padding: 6px 14px; border-radius: 100px; font-size: 0.75rem; font-weight: 700; box-shadow: 0 8px 16px rgba(0,0,0,0.1); border: 1px solid rgba(255,255,255,0.1); font-family: 'Plus Jakarta Sans', sans-serif; }
         .cert-preview svg { width: 100%; height: auto; display: block; }
         .cert-info ul { list-style: none; display: flex; flex-direction: column; gap: 12px; font-weight: 600; font-size: 0.95rem; margin-top: 20px; }
-        .cert-info ul li { display: flex; align-items: flex-start; gap: 10px; }
+        .cert-info ul li { display: flex; align-items: flex-start; gap: 10px; line-height: 1.6; }
         .cert-info ul li i { color: var(--orange-main); margin-top: 4px; }
         
         /* Premium Guarantee Box */
         .premium-guarantee-container { max-width: 900px; margin: 80px auto 0 auto; background: #ffffff; border: 1px solid rgba(255, 107, 0, 0.12); border-radius: 28px; padding: 50px 30px; position: relative; overflow: hidden; box-shadow: 0 25px 60px rgba(255, 107, 0, 0.04); text-align: center; }
         .badge-wrapper { display: inline-flex; align-items: center; justify-content: center; width: 80px; height: 80px; background: rgba(255, 107, 0, 0.06); border-radius: 50%; margin-bottom: 24px; }
         .badge-wrapper i { font-size: 2.8rem; background: linear-gradient(135deg, #ff6b00, #ff9e54); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .guarantee-title { font-size: 2.1rem; font-weight: 700; color: #0f172a; margin-bottom: 16px; letter-spacing: -0.5px; }
+        .guarantee-title { font-size: 2.1rem; font-weight: 700; color: #0f172a; margin-bottom: 16px; line-height: 1.4; }
         .guarantee-title span { color: #ff6b00; }
-        .guarantee-text { font-size: 1.1rem; color: #475569; max-width: 740px; margin: 0 auto 28px auto; line-height: 1.7; }
+        .guarantee-text { font-size: 1.1rem; color: #475569; max-width: 740px; margin: 0 auto 28px auto; line-height: 1.8; }
         .trust-footer-tags { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
-        .trust-tag { display: inline-flex; align-items: center; gap: 8px; font-size: 0.85rem; font-weight: 700; color: #64748b; background: #f8fafc; padding: 6px 14px; border-radius: 100px; border: 1px solid #e2e8f0; }
+        .trust-tag { display: inline-flex; align-items: center; gap: 8px; font-size: 0.85rem; font-weight: 700; color: #64748b; background: #f8fafc; padding: 6px 14px; border-radius: 100px; border: 1px solid #e2e8f0; font-family: 'Plus Jakarta Sans', sans-serif; }
         .trust-tag i { color: #ff6b00; }
 
         /* Audience Section */
         .audience-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
         .audience-card { background: var(--card-light); border: 1px solid var(--border-light); border-left: 5px solid var(--orange-main); padding: 24px; border-radius: 4px 20px 20px 4px; display: flex; align-items: center; gap: 20px; }
-        .audience-card p { font-size: 1rem; font-weight: 600; line-height: 1.5; }
+        .audience-card p { font-size: 1rem; font-weight: 600; line-height: 1.6; }
+
+        /* COURSE PRICING & SUMMARY CARD SECTION */
+        .pricing-section { background: var(--bg-subtle); padding: 10px 0; }
+        .pricing-card { max-width: 650px; margin: 0 auto; background: white; border: 1px solid rgba(15, 23, 42, 0.08); border-radius: 32px; overflow: hidden; box-shadow: 0 30px 60px rgba(0,0,0,0.03); }
+        .pricing-header { background: #0f172a; color: white; padding: 40px 35px; text-align: center; }
+        .pricing-header h3 { font-size: 1.8rem; font-weight: 700; margin-bottom: 10px; line-height: 1.4; }
+        .pricing-header .price-display { font-size: 3.2rem; font-weight: 800; color: var(--orange-main); font-family: 'Plus Jakarta Sans', sans-serif; }
+        .pricing-header .price-sub { font-size: 0.9rem; color: #94a3b8; font-weight: 600; display: block; margin-top: -5px; font-family: 'Plus Jakarta Sans', sans-serif; }
+        .pricing-body { padding: 40px 35px; background: white; }
+        .pricing-body h4 { font-size: 1.1rem; font-weight: 700; margin-bottom: 20px; color: #0f172a; text-transform: uppercase; letter-spacing: 0.5px; }
+        .summary-list { list-style: none; display: flex; flex-direction: column; gap: 16px; }
+        .summary-list li { display: flex; align-items: flex-start; gap: 14px; font-size: 1rem; color: var(--text-dark); font-weight: 600; line-height: 1.6; }
+        .summary-list li i { color: #10b981; font-size: 1.2rem; margin-top: 4px; }
+        .pricing-footer { padding: 0 35px 40px 35px; text-align: center; }
 
         /* CTA */
         .cta-section { text-align: center; background: var(--bg-dark-hero); color: white; padding: 100px 0; background-image: radial-gradient(circle at center, rgba(255, 107, 0, 0.12), transparent 60%); }
-        .cta-section h2 { font-size: 2.8rem; margin-bottom: 20px; font-weight: 700; letter-spacing: -1px; line-height: 1.2; }
-        .cta-section p { color: #94a3b8; font-size: 1.2rem; max-width: 700px; margin: 0 auto 40px auto; }
+        .cta-section h2 { font-size: 2.8rem; margin-bottom: 20px; font-weight: 700; line-height: 1.4; }
+        .cta-section p { color: #94a3b8; font-size: 1.2rem; max-width: 700px; margin: 0 auto 40px auto; line-height: 1.8; }
 
-        footer { background: #060911; padding: 30px 0; text-align: center; color: #64748b; font-size: 0.9rem; border-top: 1px solid rgba(255, 255, 255, 0.05); }
+        footer { background: #060911; padding: 30px 0; text-align: center; color: #64748b; font-size: 0.9rem; border-top: 1px solid rgba(255, 255, 255, 0.05); font-family: 'Plus Jakarta Sans', sans-serif; }
 
         /* RESPONSIVE MEDIA QUERIES */
         @media (max-width: 992px) {
@@ -298,6 +350,8 @@
             .btn { width: 100%; }
             .nav-container .btn { display: none; }
             .calc-summary-bar { flex-direction: column; gap: 15px; }
+            .pricing-header, .pricing-body { padding: 30px 20px; }
+            .pricing-header .price-display { font-size: 2.6rem; }
         }
     </style>
 </head>
@@ -307,7 +361,7 @@
     <header>
         <div class="nav-container">
             <div class="logo">OBI<span>.</span></div>
-            <a href="#cta" class="btn btn-orange" style="padding: 10px 20px; font-size: 0.85rem; border-radius: 10px;">දැන්ම පටන් ගන්න</a>
+            <a href="#enrollment" class="btn btn-orange" style="padding: 10px 20px; font-size: 0.85rem; border-radius: 10px;">දැන්ම පටන් ගන්න</a>
         </div>
     </header>
 
@@ -317,7 +371,7 @@
             <span class="badge">ඔයාගෙම බිස්නස් එකක් පටන් ගන්න හොඳම වෙලාව ආවා</span>
             <h1><span>ගෙදර ඉඳන්ම ඔන්ලයින් බිස්නස් එකක්</span><br><em>හරිම විදිහට පටන් ගමුද?</em></h1>
             <p>කොහෙන්ද පටන් ගන්නේ, මොනවාද විකුණන්නේ කියලා හිතාගන්න බැරිවද ඉන්නේ? කිසිම බයක් වෙන්න එපා. එක රුපියලක්වත් මුලින් Stock වලට යට කරන්නේ නැතුව, Alibaba එකෙන් බඩු ගෙනල්ලා ඔයාගෙම කියලා සුපිරි Brand එකක් හදන හැටි මුල ඉඳන් සරලවම මම මේ වීඩියෝ කෝස් එකෙන් කියලා දෙනවා.</p>
-            <a href="#cta" class="btn btn-orange">කෝස් එකට සෙට් වෙන්න <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="#enrollment" class="btn btn-orange">කෝස් එකට සෙට් වෙන්න <i class="fa-solid fa-arrow-right"></i></a>
         </div>
     </section>
 
@@ -372,7 +426,7 @@
             <!-- OBJECTION HANDLER REALITY CHECK -->
             <div class="objection-handler-box">
                 <i class="fa-solid fa-lightbulb" style="color: #16a34a; margin-right: 8px;"></i>
-                දවසට Orders 16-17ක් ගන්න එක මුලින්ම බලද්දී අමාරුයි වගේ පෙනෙන්න පුළුවන්. හැබැයි බිස්නස් එක ඇතුළේ ඇත්තම කතාව ඒක නෙමෙයි. අපේ Sourcing ක්‍රමවේද හරියටම පාවිච්චි කරලා ලංකාවේ ඇත්තටම Demand එකක් තියෙන හරිම Product එකක් Select කරගත්තොත්, දවසට Orders 100ක් වුණත් ගන්න එක සුළු දෙයක්!
+                දවසට Orders 16-17ක් ගන්න එක මුලින්ම බලද්දී අමාරුයි වගේ පෙනෙන්න පුළුවන්. හැබැයි බිස්නස් එක ඇතුළේ ඇත්තම කතාව ඒක නෙමෙයි. අපේ Sourcing breaths හරියටම පාවිච්චි කරලා ලංකාවේ ඇත්තටම Demand එකක් තියෙන හරි Product එකක් Select කරගත්තොත්, දවසට Orders 100ක් වුණත් ගන්න එක සුළු දෙයක්!
             </div>
 
             <!-- VISION MULTIPLIER BOX -->
@@ -384,7 +438,7 @@
         </div>
     </section>
 
-    <!-- Step by Step Business Flow Section (NO ICONS, NUMBERS ONLY) -->
+    <!-- Step by Step Business Flow Section -->
     <section class="process-section">
         <div class="container">
             <h2 class="section-title">අපි බිස්නස් එක කරන්නේ <span>කොහොමද? (සරල පියවර 4)</span></h2>
@@ -437,7 +491,7 @@
                     <h3>බඩු ගෙන්වීම (Sourcing & Shipping)</h3>
                     <p>චීනෙන් ලංකාවටම ඉතාම අඩු මිලට බඩු ගෙන්න ගන්නා හැටි සහ ලංකාවේ ඉන්න Local Suppliersලාගෙන් බඩු ගන්නා හැටි.</p>
                     <div class="highlight-alert">
-                        <i class="fa-solid fa-circle-exclamation" style="font-size: 1.2rem; color: #b45309;"></i> 
+                        <i class="fa-solid fa-circle-exclamation" style="font-size: 1.2rem; color: #b45309; margin-top: 3px;"></i> 
                         <span><b>Alibaba එකේ බඩු ලාභ වුණත් Shipping සහ Tax වැඩි වෙයි කියලා බයද?</b> ඒකට තමයි අපේ රහස් OBI ක්‍රම තියෙන්නේ. Shipping Cost එක පට්ටම අඩු කරගෙන, බදු (Tax) ප්‍රශ්න ඔක්කොම විසඳගෙන ලංකාවටම බඩු ගේන හැටි මේකෙන් කියා දෙනවා!</span>
                     </div>
                 </div>
@@ -451,7 +505,7 @@
                 <div class="module-card hover-lift">
                     <div class="module-meta"><span class="module-tag">Module 04</span><span class="video-badge">Video Lessons</span></div>
                     <h3>පෝස්ට් සහ වීඩියෝ ඇඩ් හැදීම</h3>
-                    <p>ඔයාගේ බිස්නස් එකට මිනිස්සු ඇදිලා එන විදිහේ ලස්සන Photos සහ වීඩියෝ Ads, პრო ලෙවල් එකට ෆෝන් එකෙන්ම ඩිසයින් කරගන්නා හැටි.</p>
+                    <p>ඔයාගේ බිස්නස් එකට මිනිස්සු ඇදිලා එන විදිහේ ලස්සන Photos සහ වීඩියෝ Ads, ප්‍රෝ ලෙවල් එකට ෆෝන් එකෙන්ම ඩිසයින් කරගන්නා හැටි.</p>
                 </div>
 
                 <div class="module-card hover-lift">
@@ -475,14 +529,14 @@
                 </div>
                 <div class="contacts-text">
                     <h3>හැම බිස්නස් කන්ටැක්ට් එකක්ම නොමිලයේ (VIP Access)</h3>
-                    <p>ඔයාට තනියම Suppliersලා, Agentsලා හොයන්න ලතැවෙන්න ඕනේ නැහැ! බිස්නස් එක සුපිරියට කරන්න ඕන වෙන ලංකාවේ විශ්වාසවන්තම <b>Customs Agents ලා, අඩුම මිලට බඩු නිදහස් කරන Sea/Air Clearing Lines, සහ ලංකාවේ අඩුවටම බඩු දෙන Wholesale Suppliersලාගේ</b> ඔක්කොම පෞද්ගලික ෆෝන් නම්බර්ස් සහ විස්තර ලයිස්තුව කෝස් එකත් එක්කම ඔයාට නොමිලේ ලැබෙනවා.</p>
+                    <p>ඔයාට තනියම Suppliersලා, Agentsලා හොයන්න ලතැවෙන්න ඕනේ නැහැ! බිස්නස් එක සැරටම කරන්න ඕන වෙන ලංකාවේ විශ්වාසවන්තම <b>Customs Agents ලා, අඩුම මිලට බඩු නිදහස් කරන Sea/Air Clearing Lines, සහ ලංකාවේ අඩුවටම බඩු දෙන Wholesale Suppliersලාගේ</b> ඔක්කොම පෞද්ගලික ෆෝන් නම්බර්ස් සහ විස්තර ලයිස්තුව කෝස් එකත් එක්කම ඔයාට නොමිලේ ලැබෙනවා.</p>
                 </div>
             </div>
 
         </div>
     </section>
 
-    <!-- NEW SOFTWARE & TOOLS BONUSES SECTION -->
+    <!-- FREE SOFTWARE BONUSES SECTION -->
     <section class="bonus-section">
         <div class="container">
             <h2 class="section-title">Course එක ඉවර කරන අයට ලැබෙන <span>රුපියල් 50,000කට වඩා වටිනා Premium මෙවලම්</span></h2>
@@ -530,28 +584,31 @@
                         <div class="metric-item"><span class="metric-num">100%</span><span class="metric-lbl">ප්‍රායෝගික ක්‍රමවේද</span></div>
                     </div>
                 </div>
+                <!-- FIXED BOX FOR TEXT CLARITY (image_2337a4.png) -->
                 <div class="value-visual">
-                    <h4 style="font-weight: 700; margin-bottom: 12px; color: var(--orange-main);">ආදායම් මාර්ග විශ්ලේෂණය</h4>
-                    <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 15px;">කිසිදු අමතර පිරිවැයකින් තොරව සෘජුවම ලාභ ලබන ස්මාර්ට් ඊ-කොමස් ව්‍යුහය.</p>
-                    <div style="background:white; padding:12px; border-radius:12px; font-weight:700; border:1px solid #e2e8f0; font-size:0.9rem; display:flex; align-items:center; gap:10px;"><i class="fa-solid fa-circle-check" style="color: #10b981;"></i> අතරමැදි වියදම් නැත</div>
+                    <h4 style="font-weight: 700; margin-bottom: 12px; color: var(--orange-main); line-height: 1.4;">ආදායම් මාර්ග විශ්ලේෂණය</h4>
+                    <p style="font-size: 0.95rem; color: var(--text-muted);">කිසිදු අමතර පිරිවැයකින් තොරව සෘජුවම ලාභ ලබන ස්මාර්ට් ඊ-කොමස් ව්‍යුහය.</p>
+                    <div class="visual-badge-box">
+                        <i class="fa-solid fa-circle-check" style="color: #10b981; font-size: 1.1rem;"></i> අතරමැදි වියදම් නැත
+                    </div>
                 </div>
             </div>
 
-            <!-- Breakdown 2 -->
+            <!-- Breakdown 2 (FIXED HEADING FROM image_2336e7.png + INCORPORATED USER REQUEST) -->
             <div class="value-block">
                 <div class="value-content">
                     <div class="value-icon-box"><i class="fa-solid fa-ship"></i></div>
                     <h3>පොඩි සල්ලි කැබැල්ලකින් චීනෙන් කෙලින්ම බඩු ගෙන්වමු</h3>
-                    <p>චීනයේ Alibaba එකෙන් සෘජුවම නිෂ්පාදකයෝ (Manufacturers) සම්බන්ධ කරගෙන, රු. 200 - 300 වගේ පට්ටම අඩු මිලට සුපිරි බඩු ලංකාවට කුඩා ඇණවුම් විදිහට (Small MOQ) ගෙන්න ගන්නා හැටි පියවරෙන් පියවර බලාගන්න පුළුවන්. රුපියල් 5,000ක් තිබ්බත් බිස්නස් එක ජාත්‍යන්තරව පටන් ගන්න පුළුවන්.</p>
+                    <p>චීනයේ Alibaba එකෙන් සෘජුවම නිෂ්පාදකයෝ (Manufacturers) සම්බන්ධ කරගෙන, රු. 200 - 300 වගේ පට්ටම අඩු මිලට සුපිරි බඩු ලංකාවට කුඩා ඇණවුම් විදිහට (Small MOQ) ගෙන්න ගන්නා හැටි පියවරෙන් පියවර බලාගන්න පුළුවන්. රුපියල් 5,000ක් වැනි සුළු මුදලක් තිබ්බත් චීනයේ ඉඳන්ම බඩු ගෙන්නලා ඔයාගේ ව්‍යාපාරය සාර්ථකව පටන් ගන්න පුළුවන්!</p>
                     <div class="metric-row">
-                        <div class="metric-item"><span class="metric-num">Rs. 200+</span><span class="metric-lbl">අවම නිෂ්පාදන මිල</span></div>
+                        <div class="metric-item"><span class="metric-num">Rs. 5,000</span><span class="metric-lbl">ප්‍රමාණවත් ආරම්භයක්</span></div>
                         <div class="metric-item"><span class="metric-num">Direct</span><span class="metric-lbl">No Middlemen</span></div>
                     </div>
                 </div>
                 <div class="value-visual" style="background: #fff8f4;">
-                    <h4 style="font-weight: 700; margin-bottom: 12px; color: #0f172a;">Sourcing Cost Target</h4>
+                    <h4 style="font-weight: 700; margin-bottom: 12px; color: #0f172a; line-height: 1.4;">Sourcing Cost Target</h4>
                     <div style="width: 100%; height: 8px; background: #e2e8f0; border-radius: 10px; margin-bottom: 12px; overflow: hidden;"><div style="width: 85%; height: 100%; background: var(--orange-main);"></div></div>
-                    <p style="font-size: 0.9rem; font-weight:600; color: var(--orange-main);">85%ක් සාමාන්‍ය වෙළඳපොළ මිලට වඩා ලාභදායී වේ.</p>
+                    <p style="font-size: 0.95rem; font-weight:600; color: var(--orange-main);">85%ක් සාමාන්‍ය වෙළඳපොළ මිලට වඩා ලාභදායී වේ.</p>
                 </div>
             </div>
 
@@ -563,11 +620,11 @@
                     <p>මේ බිස්නස් එක කරන්නයි, කෝස් එක ඉගෙන ගන්නයි ඔයාට ගණන් අධික ලැප්ටොප් හෝ පරිගණක අවශ්‍ය වෙන්නේ නැහැ. ඔයා දැනට පාවිච්චි කරන ස්මාර්ට් ෆෝන් එකෙන්ම බඩු සොයන හැටි, ඕඩර් කරන හැටි, Facebook Ads දාන හැටි සහ Customersලා හැන්ඩ්ල් කරන හැටි ඔක්කොම මේකේ තියෙනවා.</p>
                 </div>
                 <div class="value-visual">
-                    <div style="display: flex; justify-content: space-around; font-size: 2.5rem; color: var(--orange-main);">
+                    <div style="display: flex; justify-content: space-around; font-size: 2.5rem; color: var(--orange-main); margin-bottom: 10px;">
                         <i class="fa-brands fa-android"></i>
                         <i class="fa-brands fa-apple"></i>
                     </div>
-                    <p style="text-align: center; margin-top: 15px; font-weight: 700; font-size: 0.95rem;">සෑම දුරකථනයකටම 100% ගැළපේ</p>
+                    <p style="text-align: center; font-weight: 700; font-size: 0.95rem; margin-bottom: 0;">සෑම දුරකථනයකටම 100% ගැළපේ</p>
                 </div>
             </div>
 
@@ -576,15 +633,15 @@
                 <div class="value-content">
                     <div class="value-icon-box"><i class="fa-solid fa-clock-rotate-left"></i></div>
                     <h3>Lifetime Access + ලයිව් සූම් සාකච්ඡා</h3>
-                    <p>වීඩියෝ ටික විතරක් දීලා අපි ඔයාව තනි කරන්නේ නැහැ. මාකට් එක වෙනස් වෙද්දී හැම සති දෙකකට වරක්ම අලුත් අප්ඩේට් වීඩියෝ කෝස් එකට නොමිලේම එකතු වෙනවා. ඒ වගේම ඔයාට එන ඕනෑම ගැටලුවක් ලයිව්ම අහලා විසඳගන්න හැම මාසෙකම "Live Zoom Q&A Sessions" පවත්වනවා.</p>
+                    <p>වීඩියෝ ටික විතරක් දීලා අපි ඔයාව තනි කරන්නේ නැහැ. මාකට් එක වෙනස් වෙද්දී හැම සති දෙකකට වරක්ම අලුත් අප්ඩේට් වීඩියෝ කෝස් එකට නොමිලේම එකතු වෙනවා. ඒ වගේම ඔයාට එන ඕනෑම ගැටලුවක් ලයිව්ම අහලා විසඳගන්න හැමමාසෙකම "Live Zoom Q&A Sessions" පවත්වනවා.</p>
                     <div class="metric-row">
                         <div class="metric-item"><span class="metric-num">24/7</span><span class="metric-lbl">Lifetime Access</span></div>
                         <div class="metric-item"><span class="metric-num">Monthly</span><span class="metric-lbl">Live Zoom Q&A</span></div>
                     </div>
                 </div>
                 <div class="value-visual" style="background: #0f172a; color: white;">
-                    <h4 style="color: var(--orange-main); font-weight: 700; margin-bottom: 8px;">OBI Community VIP Support</h4>
-                    <p style="font-size: 0.85rem; color: #94a3b8;">ව්‍යාපාරය ආරම්භ කළ පසු මුහුණ දෙන ප්‍රායෝගික ගැටළු සඳහා කණ්ඩායම් සහාය.</p>
+                    <h4 style="color: var(--orange-main); font-weight: 700; margin-bottom: 8px; line-height: 1.4;">OBI Community VIP Support</h4>
+                    <p style="font-size: 0.96rem; color: #94a3b8; margin-bottom: 0;">ව්‍යාපාරය ආරම්භ කළ පසු මුහුණ දෙන ප්‍රායෝගික ගැටළු සඳහා කණ්ඩායම් සහාය.</p>
                 </div>
             </div>
 
@@ -596,7 +653,7 @@
                     <p>වර්තමාන තරඟකාරී ලෝකයේ හැමදේම තනියම ලියා ලියා ඉන්න වෙලාවක් නැහැ. ChatGPT වැනි සුපිරි AI මෙවලම් පාවිච්චි කරලා, බඩු වලට ආකර්ෂණීය විස්තර (Product Descriptions) ලියාගන්නා හැටි සහ විනාඩියෙන් ඉහළ විකුණුම් ගෙනෙන ඇඩ් කොපි හදාගන්නා හැටි ප්‍රායෝගිකවම ඉගෙන ගන්න.</p>
                 </div>
                 <div class="value-visual">
-                    <div style="background: rgba(255,107,0,0.04); border-radius:12px; padding:15px; border: 1px dashed var(--orange-main); font-family: monospace; font-size: 0.85rem; color: #334155;">
+                    <div style="background: rgba(255,107,0,0.04); border-radius:12px; padding:15px; border: 1px dashed var(--orange-main); font-family: monospace; font-size: 0.85rem; color: #334155; margin-bottom: 0;">
                         🚀 Prompt: "Generate high-converting e-commerce copy for my trending Alibaba product..."
                     </div>
                 </div>
@@ -614,7 +671,7 @@
             <div class="cert-showcase-box">
                 <div class="cert-info">
                     <div class="value-icon-box" style="background: rgba(255,107,0,0.1);"><i class="fa-solid fa-graduation-cap"></i></div>
-                    <h3 style="font-size: 1.6rem; font-weight:700; margin-bottom:15px;">ඔයාගේ දැනුමට වටිනාකමක් දෙන්න</h3>
+                    <h3 style="font-size: 1.6rem; font-weight:700; margin-bottom:15px; line-height: 1.4;">ඔයාගේ දැනුමට වටිනාකමක් දෙන්න</h3>
                     <p style="color: var(--text-muted); font-size:1rem;">මෙම සහතිකය මගින් ඔබ Alibaba Sourcing සහ Smart Marketing පිළිබඳව මනා ප්‍රායෝගික දැනුමක් ලබා ඇති බව තහවුරු කරයි. මෙය ඔබගේ e-Commerce සන්නාමයේ විශ්වසනීයත්වය ඉහළ නැංවීමට මහෝපකාරී වේ.</p>
                     <ul>
                         <li><i class="fa-solid fa-circle-check"></i> Unique Verification ID එකක් අඩංගුයි.</li>
@@ -664,7 +721,7 @@
                     <p>ගෙදර ඉඳන්ම ඉන්ටර්නෙට් එකෙන් සුපිරි අමතර ආදායමක් හොයන්න ආස අයට.</p>
                 </div>
                 <div class="audience-card">
-                    <p>තමන්ගේම කියලා බිස්නස් එකක් පටන් ගන්න ආසාව තිබ්බත්, ක්‍රමයක් දන්නේ නැතුව ළතවෙන อයට.</p>
+                    <p>තමන්ගේම කියලා බිස්නස් එකක් පටන් ගන්න ආසාව තිබ්බත්, ක්‍රමයක් දන්නේ නැතුව ළතවෙන අයට.</p>
                 </div>
                 <div class="audience-card">
                     <p>ජොබ් එකක් කරන ගමන්, ඒකට බාධාවක් කරගන්නේ නැතුව Part-time සල්ලි ටිකක් හොයන්න බලන අයට.</p>
@@ -694,8 +751,44 @@
         </div>
     </section>
 
+    <!-- COURSE PRICING & SUMMARY CARD SECTION -->
+    <section class="pricing-section" id="enrollment">
+        <div class="container">
+            <h2 class="section-title">පාඨමාලා ගාස්තුව සහ <span>ඇතුළත් සියලුම දේ</span></h2>
+            <p class="section-subtitle">කිසිදු සැඟවුණු ගාස්තුවක් නොමැත. එකවරක් පමණක් ගෙවා ජීවිත කාලය පුරාවටම ඉගෙන ගන්න.</p>
+            
+            <div class="pricing-card">
+                <div class="pricing-header">
+                    <h3>Alibaba Selling Master Course</h3>
+                    <div class="price-display">Rs. 10,900</div>
+                    <span class="price-sub">One-time Payment / Lifetime Access</span>
+                </div>
+                <div class="pricing-body">
+                    <h4>ඔයාට ලැබෙන දේවල් සාරාංශය (Course Summary):</h4>
+                    <ul class="summary-list">
+                        <li><i class="fa-solid fa-circle-check"></i> Complete HD Video Modules 06 (මුල සිට සරලව)</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Alibaba Sourcing & Shipping රහස් ක්‍රමවේද</li>
+                        <li><i class="fa-solid fa-circle-check"></i> ලංකාවේ විශ්වාසවන්තම Customs Agents සහ Clearing Lines සම්බන්ධතා</li>
+                        <li><i class="fa-solid fa-circle-check"></i> ලංකාවේ අඩුවටම බඩු දෙන Local Wholesale Suppliers ලැයිස්තුව</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Canva Pro නිල ගිණුම (Social Media Posts සෑදීමට)</li>
+                        <li><i class="fa-solid fa-circle-check"></i> CapCut Pro Premium මෙවලම් (Video Ads සෑදීමට)</li>
+                        <li><i class="fa-solid fa-circle-check"></i> WhatsApp CRM Tool (BULK Messages සහ Auto-Reply සඳහා)</li>
+                        <li><i class="fa-solid fa-circle-check"></i> මසකට වරක් පැවැත්වෙන Live Zoom Q&A සාකච්ඡා</li>
+                        <li><i class="fa-solid fa-circle-check"></i> OBI ආයතනයෙන් පිරිනමන Verified නිල සහතිකය</li>
+                        <li><i class="fa-solid fa-circle-check"></i> දින 14ක 100% මුදල් ආපසු ගෙවීමේ සහතිකය</li>
+                    </ul>
+                </div>
+                <div class="pricing-footer">
+                    <a href="https://wa.me/YOUR_NUM" target="_blank" class="btn btn-orange" style="width: 100%;">
+                        <i class="fa-brands fa-whatsapp" style="font-size: 1.5rem;"></i> දැන්ම සම්බන්ධ වී ලියාපදිංචි වන්න
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Call To Action (CTA) Section -->
-    <section class="cta-section" id="cta">
+    <section class="cta-section">
         <div class="container">
             <h2>ඔයාගෙම E-commerce බිස්නස් එක අදම පටන් ගමු!</h2>
             <p>තව හිත හිත කාලය නාස්ති කරන්න එපා. OBI (Online Business Institute) එකත් එක්ක සෙට් වෙලා අදම ඔයාගේ සාර්ථක ගමන පටන් ගන්න!</p>
