@@ -174,6 +174,19 @@
         .hero h1 em { font-style: normal; color: var(--orange-main); }
         .hero p { font-size: 1.15rem; color: #94a3b8; max-width: 850px; margin: 0 auto 40px auto; line-height: 1.7; }
 
+        /* Calculation Section */
+        .calculation-section { background: #fff8f4; border-bottom: 1px solid rgba(255, 107, 0, 0.08); }
+        .calc-wrapper { background: white; border: 1px solid rgba(255,107,0,0.15); border-radius: 28px; padding: 45px; box-shadow: 0 20px 40px rgba(255,107,0,0.03); }
+        .calc-table-container { margin: 30px 0; overflow-x: auto; border-radius: 16px; border: 1px solid #e2e8f0; }
+        .calc-table { width: 100%; border-collapse: collapse; text-align: left; min-width: 500px; }
+        .calc-table th { background: #0f172a; color: white; padding: 16px 20px; font-weight: 700; }
+        .calc-table td { padding: 16px 20px; border-bottom: 1px solid #e2e8f0; font-weight: 600; font-size: 1.05rem; }
+        .calc-table tr:last-child td { background: rgba(16, 185, 129, 0.1); color: #10b981; font-size: 1.25rem; font-weight: 800; border-bottom: none; }
+        .calc-summary-boxes { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-top: 30px; }
+        .calc-box { background: #f8fafc; border: 1px solid #e2e8f0; padding: 20px; border-radius: 16px; text-align: center; }
+        .calc-box-highlight { background: var(--orange-gradient); color: white; border: none; }
+        .calc-box-highlight p { color: rgba(255,255,255,0.8) !important; }
+
         /* Step by Step Flow */
         .process-section { background: var(--bg-body); }
         .process-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 40px 24px; margin-top: 20px; }
@@ -190,6 +203,13 @@
         .module-tag { color: var(--orange-main); font-weight: 700; font-size: 0.85rem; text-transform: uppercase; }
         .video-badge { background: rgba(255, 107, 0, 0.06); color: var(--orange-main); font-size: 0.75rem; padding: 4px 10px; border-radius: 6px; font-weight: 700; border: 1px solid rgba(255, 107, 0, 0.15); display: inline-flex; align-items: center; gap: 6px; }
         .module-card h3 { font-size: 1.4rem; margin-bottom: 12px; font-weight: 700; }
+        .highlight-alert { background: #fffbeb; border: 1px solid #fef3c7; color: #b45309; font-size: 0.9rem; padding: 10px 14px; border-radius: 12px; margin-top: 15px; font-weight: 600; display: flex; gap: 10px; align-items: center; }
+
+        /* Contacts Banner */
+        .contacts-highlight-banner { background: #0f172a; color: white; border-radius: 24px; padding: 40px; margin-top: 50px; display: flex; align-items: center; gap: 30px; border-left: 6px solid var(--orange-main); }
+        .contacts-icon { font-size: 3rem; color: var(--orange-main); shrink: 0; background: rgba(255,107,0,0.1); width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; border-radius: 20px; }
+        .contacts-text h3 { font-size: 1.6rem; margin-bottom: 8px; color: white; }
+        .contacts-text p { color: #94a3b8; font-size: 1rem; }
 
         /* Modern Value Explainer Layouts */
         .value-block { display: flex; align-items: center; gap: 50px; margin-bottom: 80px; }
@@ -244,7 +264,6 @@
         /* ==========================================================================
            RESPONSIVE MEDIA QUERIES (MOBILE OPTIMIZATIONS)
            ========================================================================== */
-        
         @media (max-width: 1200px) {
             .hero h1 { font-size: 3.2rem; }
         }
@@ -254,10 +273,9 @@
             .hero { padding-top: 160px; padding-bottom: 80px; }
             .hero h1 { font-size: 2.8rem; }
             .section-title { font-size: 2.2rem; }
-            
-            /* Responsive stack adjustments */
             .value-block, .value-block:nth-child(even) { flex-direction: column; gap: 30px; margin-bottom: 60px; }
             .cert-showcase-box { flex-direction: column; padding: 30px 20px; gap: 35px; }
+            .contacts-highlight-banner { flex-direction: column; text-align: center; padding: 30px 20px; }
         }
 
         @media (max-width: 768px) {
@@ -268,8 +286,9 @@
             .section-subtitle { text-align: left; font-size: 1rem; margin-bottom: 40px; }
             
             .btn { width: 100%; padding: 16px 24px; }
-            .nav-container .btn { display: none; } /* Hide secondary button on header for space */
+            .nav-container .btn { display: none; }
             
+            .calc-wrapper { padding: 25px 15px; }
             .process-grid { gap: 32px 0; }
             .process-card { padding: 35px 24px; }
             
@@ -291,7 +310,7 @@
         @media (max-width: 480px) {
             .hero h1 { font-size: 1.95rem; }
             .section-title { font-size: 1.65rem; }
-            .metric-row { flex-direction: column; gap: 12px; } /* Stack numbers vertically on micro screens */
+            .metric-row { flex-direction: column; gap: 12px; }
             .trust-footer-tags { flex-direction: column; align-items: stretch; }
             .trust-tag { justify-content: center; }
             .audience-card { flex-direction: column; align-items: flex-start; gap: 16px; border-left: 4px solid var(--orange-main); border-radius: 16px; }
@@ -315,6 +334,73 @@
             <h1><span>ඔන්ලයින් බිස්නස් එකක් පටන් ගන්න</span><br><em>හීනයක් ඔයාටත් තියෙනවා නේද?</em></h1>
             <p>කොහොමද මුලින්ම පටන් ගන්නේ කියලා හිතාගන්න බැරිද? බය වෙන්න එපා! එක රුපියලක්වත් මුලින් වියදම් කරන්නේ නැතුව Alibaba හරහා සාර්ථක Brand එකක් ගොඩනගන රහස් පියවරෙන් පියවර මේ වීඩියෝ පාඨමාලාවෙන් ඉගෙන ගන්න.</p>
             <a href="#cta" class="btn btn-orange">Alibaba Course එකට සම්බන්ධ වෙන්න <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </section>
+
+    <!-- Monthly Million Profit Roadmap (New Calculation Section Inserted Vertically Higher) -->
+    <section class="calculation-section">
+        <div class="container">
+            <h2 class="section-title">මාසෙකට <span>රු. මිලියනයක් (ලක්ෂ 10ක්)</span> උපයන සැබෑ ගණිතය 🚀</h2>
+            <p class="section-subtitle">හුදෙක් සිහිනයක් නොව, එකම එක සාර්ථක Product එකක් නිවැරදිව මාකට් කිරීමෙන් ලක්ෂ 10ක ශුද්ධ ලාභයක් ලබන ආකාරය පියවරෙන් පියවර මෙන්න.</p>
+            
+            <div class="calc-wrapper">
+                <div class="calc-table-container">
+                    <table class="calc-table">
+                        <thead>
+                            <tr>
+                                <th>අයිතමය (Item Description)</th>
+                                <th>එක් ඒකකයක පිරිවැය / ලාභය</th>
+                                <th>මාසික එකතුව (ඇණවුම් 500ක් සඳහා)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>භාණ්ඩයක සාමාන්‍ය විකුණුම් මිල (Selling Price)</td>
+                                <td>Rs. 4,500</td>
+                                <td>Rs. 2,250,000 (මුළු ආදායම)</td>
+                            </tr>
+                            <tr>
+                                <td>Alibaba නිෂ්පාදන පිරිවැය + Shipping + Tax (Cost)</td>
+                                <td>Rs. 1,500</td>
+                                <td>Rs. 750,000</td>
+                            </tr>
+                            <tr>
+                                <td>Delivery & Courier ගාස්තු (COD)</td>
+                                <td>Rs. 500</td>
+                                <td>Rs. 250,000</td>
+                            </tr>
+                            <tr>
+                                <td>Facebook / TikTok Ads පිරිවැය (Marketing)</td>
+                                <td>Rs. 500</td>
+                                <td>Rs. 250,000</td>
+                            </tr>
+                            <tr>
+                                <td>ඔබේ මාසික ශුද්ධ ලාභය (Net Monthly Profit)</td>
+                                <td>Rs. 2,000 (Product එකකින්)</td>
+                                <td>Rs. 1,000,000 (රුපියල් මිලියනයයි!)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="calc-summary-boxes">
+                    <div class="calc-box">
+                        <i class="fa-solid fa-cart-shopping" style="color:var(--orange-main); font-size:1.5rem; margin-bottom:8px;"></i>
+                        <p style="font-size:0.85rem; color:var(--text-muted); font-weight:700;">දිනකට අවශ්‍ය ඇණවුම්</p>
+                        <h4 style="font-size:1.6rem; font-weight:800;">16 - 17 Orders</h4>
+                    </div>
+                    <div class="calc-box">
+                        <i class="fa-solid fa-money-bill-wave" style="color:#10b981; font-size:1.5rem; margin-bottom:8px;"></i>
+                        <p style="font-size:0.85rem; color:var(--text-muted); font-weight:700;">එක් භාණ්ඩයකින් ලාභය</p>
+                        <h4 style="font-size:1.6rem; font-weight:800; color:#10b981;">Rs. 2,000</h4>
+                    </div>
+                    <div class="calc-box calc-box-highlight">
+                        <i class="fa-solid fa-trophy" style="color:white; font-size:1.5rem; margin-bottom:8px;"></i>
+                        <p style="font-size:0.85rem; color:rgba(255,255,255,0.8); font-weight:700;">මාස 1ක ඉලක්කය</p>
+                        <h4 style="font-size:1.6rem; font-weight:800;">Rs. 1,000,000</h4>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -374,10 +460,14 @@
                     <p>Online Ecommerce ව්‍යාපාරයක් ආරම්භ කරනකොට මූලිකවම අවශ්‍ය කරන දේවල් නිවැරදිව නිර්මාණය කරගන්න ආකාරය සරලව කියා දෙයි.</p>
                 </div>
 
-                <div class="module-card hover-lift">
-                    <div class="module-meta"><span class="module-tag">Module 02</span><span class="video-badge"><i class="fa-solid fa-video"></i> Video Lessons</span></div>
-                    <h3>භාණ්ඩ ගෙන්වීම (Sourcing)</h3>
+                <div class="module-card hover-lift" style="border: 1px solid rgba(255, 107, 0, 0.4); box-shadow: 0 10px 25px rgba(255,107,0,0.04);">
+                    <div class="module-meta"><span class="module-tag" style="color:#ff6b00;">Module 02 (Hot)</span><span class="video-badge" style="background:rgba(255,107,0,0.1);"><i class="fa-solid fa-bolt"></i> Special</span></div>
+                    <h3>භාණ්ඩ ගෙන්වීම (Sourcing & Shipping)</h3>
                     <p>චීනයේ සිට ලංකාවට ඉතා අඩු මිලට භාණ්ඩ ගෙන්න ගන්න ආකාරය වගේම ලංකාවේ ඉන්න Local Reseller ලගෙන් භාණ්ඩ මිලදී ගන්නා ආකාරය.</p>
+                    <div class="highlight-alert">
+                        <i class="fa-solid fa-shield-halved"></i> 
+                        <span>Alibaba එකෙන් Shipping Cost එකයි, Tax එකයි බින්දුවටම බස්සලා බඩු ගෙන්වන රහස් OBI Shipping Method එක මෙතනදී කියාදේ!</span>
+                    </div>
                 </div>
 
                 <div class="module-card hover-lift">
@@ -405,6 +495,18 @@
                 </div>
 
             </div>
+
+            <!-- New Supplier/Contacts Highlight Banner Added Here -->
+            <div class="contacts-highlight-banner">
+                <div class="contacts-icon">
+                    <i class="fa-solid fa-address-book"></i>
+                </div>
+                <div class="contacts-text">
+                    <h3>🎁 සියලුම ව්‍යාපාරික Contacts නොමිලයේ (VIP Access)</h3>
+                    <p>ඔයාට තනියම Suppliersලා හොයන්න, බයවෙන්න කිසිම අවශ්‍යතාවයක් නැහැ! බිස්නස් එක සාර්ථකව කරගෙන යන්න අවශ්‍ය වෙන ලංකාවේ විශ්වාසවන්තම <b>Customs Agents ලා, Sea/Air Clearing Lines, සහ අඩුම මිලට බඩු දෙන Local wholesale Suppliers ලාගේ</b> සියලුම පෞද්ගලික දුරකථන අංක සහ විස්තර (A-Z Contacts List) පාඨමාලාව සමඟ ඔබට සම්පූර්ණයෙන්ම නොමිලේ ලබා දෙනවා.</p>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -418,7 +520,7 @@
             <div class="value-block">
                 <div class="value-content">
                     <div class="value-icon-box"><i class="fa-solid fa-wallet"></i></div>
-                    <h3>ලොකු වියදමකින් තොරව (Zero Stock) බිස්නස් එක පටන් ගන්නා ක්‍රම</h3>
+                    <h3>ලොකු වියදමකින් තොරව (Zero Stock) බිස්නස් එක පටන් ගන්නා鏡ක්‍රම</h3>
                     <p>සාමාන්‍යයෙන් E-commerce ව්‍යාපාරයක් පටන් ගන්නකොට ලොකු මුදලක් Stock එකකට යට කරන්න සිදුවෙනවා නේද? නමුත් මේ පාඨමාලාවේදී, කිසිම ආරම්භක ආයෝජනයක් හෝ භාණ්ඩ කලින් මිලදී ගැනීමක් නොකර, ලංකාවේ සිටින Local Resellers ලා සහ Drop-shipping ක්‍රමවේද හරහා සතයක්වත් නොදමා ව්‍යාපාරය ආරම්භ කරන රහස්‍ය උපක්‍රම අපි ඔබට කියා දෙනවා.</p>
                     <div class="metric-row">
                         <div class="metric-item"><span class="metric-num">Rs. 0</span><span class="metric-lbl">ආරම්භක ආයෝජනය</span></div>
@@ -438,7 +540,7 @@
                 <div class="value-content">
                     <div class="value-icon-box"><i class="fa-solid fa-ship"></i></div>
                     <h3>රු. 5,000ක වැනි කුඩා මුදලකින් චීනයෙන් කෙලින්ම බඩු ගෙන්වමු</h3>
-                    <p>චීනයේ අලිබබා (Alibaba) වෙළඳපොළෙන් සෘජුවම නිෂ්පාදකයින් සම්බන්ධ කරගනිමින්, රු. 200–300 තරම් ඉතා අවම මිල ගණන් වලට උසස් තත්ත්වයේ භාණ්ඩ ලංකාවට කුඩා ඇණවුම් ලෙස (Small MOQ) ගෙන්වා ගන්නා ආකාරය පියවරෙන් පියවර කියා දේ. රු. 5,000 ක වැනි සුළු මුදලකින් වුවද ඔබට ව්‍යාපාරය ජාත්‍යන්තරව සම්බන්ධ කළ හැක.</p>
+                    <p>චීනයේ අලිබබා (Alibaba) වෙළඳපොළෙන් සෘජුවම නිෂ්පාදකයින් සම්බන්ධ කරගනිමින්, රු. 200–300 තරම් ඉතා අවම මිල ගණන් වලට උසස් තත්ත්වයේ භාණ්ඩ ලංකාවට කුඩා ඇණවුම් ලෙස (Small MOQ) ගෙන්වා ගන්නා ආකාරය පියවරෙන් පියවර කියා දේ. රු. 5,000 ค වැනි සුළු මුදලකින් වුවද ඔබට ව්‍යාපාරය ජාත්‍යන්තරව සම්බන්ධ කළ හැක.</p>
                     <div class="metric-row">
                         <div class="metric-item"><span class="metric-num">Rs. 200+</span><span class="metric-lbl">අවම නිෂ්පාදන මිල</span></div>
                         <div class="metric-item"><span class="metric-num">Direct</span><span class="metric-lbl">No Middlemen</span></div>
@@ -480,7 +582,7 @@
                 </div>
                 <div class="value-visual" style="background: #0f172a; color: white;">
                     <h4 style="color: var(--orange-main); font-weight: 700; margin-bottom: 8px;">OBI Community VIP Support</h4>
-                    <p style="font-size: 0.85rem; color: #94a3b8;">ව්‍යාපාරය ආරම්භ කළ පසු මුහුණ දෙන ප්‍රායريقة ගැටළු සඳහා කණ්ඩායම් සහාය.</p>
+                    <p style="font-size: 0.85rem; color: #94a3b8;">ව්‍යාපාරය ආරම්භ කළ පසු මුහුණ දෙන ප්‍රායෝගික ගැටළු සඳහා කණ්ඩායම් සහාය.</p>
                 </div>
             </div>
 
@@ -511,7 +613,7 @@
                 <div class="cert-info">
                     <div class="value-icon-box" style="background: rgba(255,107,0,0.1);"><i class="fa-solid fa-graduation-cap"></i></div>
                     <h3 style="font-size: 1.6rem; font-weight:700; margin-bottom:15px;">ඔබේ ව්‍යාපාරික පියවර නිල වශයෙන් සහතික කරන්න</h3>
-                    <p style="color: var(--text-muted); font-size:1rem;">මෙම සහතිකය මගින් ඔබ Alibaba Sourcing සහ Smart Marketing පිළිබඳව مනා ප්‍රායෝගික දැනුමක් ලබා ඇති බව තහවුරු කරයි. මෙය ඔබගේ e-Commerce සන්නාමයේ විශ්වසනීයත්වය ඉහළ නැංවීමට මහෝපකාරී වේ.</p>
+                    <p style="color: var(--text-muted); font-size:1rem;">මෙම සහතිකය මගින් ඔබ Alibaba Sourcing සහ Smart Marketing පිළිබඳව මනා ප්‍රායෝගික දැනුමක් ලබා ඇති බව තහවුරු කරයි. මෙය ඔබගේ e-Commerce සන්නාමයේ විශ්වසනීයත්වය ඉහළ නැංවීමට මහෝපකාරී වේ.</p>
                     <ul>
                         <li><i class="fa-solid fa-circle-check"></i> Unique Verification ID එකක් සහිතයි.</li>
                         <li><i class="fa-solid fa-circle-check"></i> High-Quality Orange & White Premium Theme Design.</li>
@@ -520,7 +622,6 @@
                 </div>
                 <div class="cert-preview">
                     <div class="cert-badge-top">OBI Verified 2026</div>
-                    <!-- Inline Responsive SVG Certificate Layout -->
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560">
                         <rect width="800" height="560" fill="#ffffff" rx="16"/>
                         <rect x="20" y="20" width="760" height="520" fill="none" stroke="#ff6b00" stroke-width="2" stroke-opacity="0.2" rx="12"/>
